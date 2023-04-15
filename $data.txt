@@ -1,0 +1,32 @@
+====
+
+(+) MainParameter.js
+(+) OnlyParameter.js
+(+) BetweenParameter.js
+(+) IntegerParameter.js
+
+====
+
+(+) --version   -> versionOpts.js    -> VersionParameter.js
+
+(+) --style     -> styleOpts.js      -> StyleParameter.js      (MainParameter.js)
+(+) --creative  -> creativeOpts.js   -> CreativeParameter.js   (OnlyParameter.js -> MainParameter.js)
+(+) --chaos     -> chaosOpts.js      -> ChaosParameter.js      (BetweenParameter.js -> MainParameter.js)
+(+) --stop      -> stopOpts.js       -> StopParameter.js       (BetweenParameter.js -> MainParameter.js)
+(+) --sameseed  -> sameseedOpts.js   -> SameseedParameter.js   (IntegerParameter.js -> MainParameter.js)
+(+) --seed      -> seedOpts.js       -> SeedParameter.js       (IntegerParameter.js -> MainParameter.js)
+(+) --video     -> videoOpts.js      -> VideoParameter.js      (OnlyParameter.js -> MainParameter.js)
+(+) --title     -> titleOpts.js      -> TitleParameter.js      (OnlyParameter.js -> MainParameter.js)
+(+) --stylize   -> stylizeOpts.js    -> StylizeParameter.js    (BetweenParameter.js -> MainParameter.js)
+(+) --quality   -> qualityOpts.js    -> QualityParameter.js    (MainParameter.js)
+(+) --aspect    -> aspectOpts.js     -> AspectParameter.js     (MainParameter.js)
+(-) --no ?
+
+====
+
+constant.js
+Error.js
+
+====
+
+(+) main.js - MAIN FAIL

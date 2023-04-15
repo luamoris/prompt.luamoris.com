@@ -1,0 +1,3 @@
+const SLASH = "--";
+
+export { SLASH };

@@ -1,2 +1,2 @@
-# prompt.luamoris.com
-Web helper for generating a large number of prompts.
+# PROMPT HELPER
+soon we will change the future
