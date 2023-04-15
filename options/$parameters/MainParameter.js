@@ -50,6 +50,7 @@ class Parameter {
       // console.log(this.pattern);
       const param = this.findByText(text);
       // has not parameters in text
+      // console.log(param);
       if (!param) return null;
       const paramStr = `${SLASH}${param.title} ${param.argument}`;
       const support = this.getSupportByVersion(versionId);

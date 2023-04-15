@@ -12,7 +12,7 @@ import TitleParameter from "./options/title/TitleParameter.js";
 import StylizeParameter from "./options/stylize/StylizeParameter.js";
 import QualityParameter from "./options/quality/QualityParameter.js";
 import AspectParameter from "./options/aspect/AspectParameter.js";
-
+import NoParameter from "./options/no/NoParameter.js";
 
 
 // ===== ===== ===== ===== CODE
@@ -30,6 +30,7 @@ const pTitle = new TitleParameter();
 const pStylize = new StylizeParameter();
 const pQuality = new QualityParameter();
 const pAspect = new AspectParameter();
+const pNo = new NoParameter();
 
 // ===== ===== ===== ===== MAIN
 
@@ -38,7 +39,7 @@ const promptText = `[__FOO йоська__], complete [__FOOD__*] review, realist
 warm lighting, detailing, foodcore design, studio lighting,
 fully blurred clean studio background, dirty blurry
 background with light [__COLOR__] gradient from dark to light from  edges to center
-high quality, 4K UHD :: --v 4 --quality 1 --no idea, manupular --ar 16:9`;
+high quality, 4K UHD :: --v 4 --quality 1 --no { a,  b,x  } --ar 16:9`;
 
 const q = "--style 4b --creative --chaos 100 --stop 100 --sameseed 100";
 
@@ -59,6 +60,7 @@ function main() {
       const stylizeStr = pStylize.getByText(promptText, versionId);
       const qualityStr = pQuality.getByText(promptText, versionId);
       const aspectStr = pAspect.getByText(promptText, versionId);
+      const noStr = pNo.getByText(promptText, versionId);
 
       // console
       console.log("PARAMETERS");
@@ -74,6 +76,7 @@ function main() {
       console.log(stylizeStr);
       console.log(qualityStr);
       console.log(aspectStr);
+      console.log(noStr);
 
    } catch (error) {
       // console.log(error);
