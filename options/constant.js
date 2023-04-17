@@ -1,3 +1,0 @@
-const SLASH = "--";
-
-export { SLASH };

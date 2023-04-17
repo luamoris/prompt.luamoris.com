@@ -4,7 +4,7 @@ soon we will change the future
 
 
 ## MIDJOURNEY
----
+
 
 ### SUPPORT PARAMETERS
 

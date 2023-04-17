@@ -1,5 +1,8 @@
 // ===== ===== ===== ===== IMPORT
-import PropmtError from "./options/Error.js";
+import PropmtError from "./helpers/Error.js";
+
+import Keywords from "./keywords/Keywords.js";
+
 import VersionParameter from "./options/version/VersionParameter.js";
 import StyleParameter from "./options/style/StyleParameter.js";
 import CreativeParameter from "./options/creative/CreativeParameter.js";
@@ -15,10 +18,20 @@ import AspectParameter from "./options/aspect/AspectParameter.js";
 import NoParameter from "./options/no/NoParameter.js";
 
 
+// ===== ===== ===== ===== DATA
+// test
+let promptText = `[__йоська__], complete [__FOOD__*] review, realistic products,
+warm lighting, detailing, foodcore design, studio lighting,
+fully blurred clean studio [__FOOD__] background, dirty blurry
+background with light [__COLOR__] gradient from dark to light from  edges to center
+high quality, 4K UHD ::  --quality 2 --no { a  ,  b, x  } --ar 16:9`;
+
+
 // ===== ===== ===== ===== CODE
 
-const pVersion = new VersionParameter();
+const keywords = new Keywords("");
 
+const pVersion = new VersionParameter();
 const pStyle = new StyleParameter();
 const pCreative = new CreativeParameter();
 const pChaos = new ChaosParameter();
@@ -32,37 +45,62 @@ const pQuality = new QualityParameter();
 const pAspect = new AspectParameter();
 const pNo = new NoParameter();
 
+
 // ===== ===== ===== ===== MAIN
-
-// test
-const promptText = `[__FOO йоська__], complete [__FOOD__*] review, realistic products,
-warm lighting, detailing, foodcore design, studio lighting,
-fully blurred clean studio background, dirty blurry
-background with light [__COLOR__] gradient from dark to light from  edges to center
-high quality, 4K UHD :: --v 4 --quality 1 --no { a,  b,x  } --ar 16:9`;
-
-const q = "--style 4b --creative --chaos 100 --stop 100 --sameseed 100";
 
 function main() {
    try {
+
+      console.log(promptText);
+
+      keywords.update(promptText);
+      promptText = keywords.replace(promptText);
       const version = pVersion.getByText(promptText);
       const versionId = version.id;
 
+
       const versionStr = version.title;
+      promptText = pVersion.replace(promptText);
+
       const styleStr = pStyle.getByText(promptText, versionId);
+      promptText = pStyle.replace(promptText);
+
       const creativeStr = pCreative.getByText(promptText, versionId);
+      promptText = pCreative.replace(promptText);
+
       const chaosStr = pChaos.getByText(promptText, versionId);
+      promptText = pChaos.replace(promptText);
+
       const stopStr = pStop.getByText(promptText, versionId);
+      promptText = pStop.replace(promptText);
+
       const samseedStr = pSamseed.getByText(promptText, versionId);
+      promptText = pSamseed.replace(promptText);
+
       const seedStr = pSeed.getByText(promptText, versionId);
+      promptText = pSeed.replace(promptText);
+
       const videoStr = pVideo.getByText(promptText, versionId);
+      promptText = pVideo.replace(promptText);
+
       const titleStr = pTitle.getByText(promptText, versionId);
+      promptText = pTitle.replace(promptText);
+
       const stylizeStr = pStylize.getByText(promptText, versionId);
+      promptText = pStylize.replace(promptText);
+
       const qualityStr = pQuality.getByText(promptText, versionId);
+      promptText = pQuality.replace(promptText);
+
       const aspectStr = pAspect.getByText(promptText, versionId);
+      promptText = pAspect.replace(promptText);
+
       const noStr = pNo.getByText(promptText, versionId);
+      promptText = pNo.replace(promptText);
 
       // console
+      console.log(promptText);
+      console.log(keywords.list);
       console.log("PARAMETERS");
       console.log(versionStr);
       console.log(styleStr);
@@ -79,7 +117,7 @@ function main() {
       console.log(noStr);
 
    } catch (error) {
-      // console.log(error);
+      console.log(error);
       console.error(error.title);
       console.error(error.problem);
    }

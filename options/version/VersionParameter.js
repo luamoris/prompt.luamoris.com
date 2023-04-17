@@ -1,7 +1,7 @@
 // ===== ===== ===== ===== IMPORT
 import versionOptions from "./versionOpts.js";
-import PropmtError from "../Error.js";
-import { SLASH } from "../constant.js";
+import PropmtError from "../../helpers/Error.js";
+import { SLASH } from "../../helpers/constant.js";
 
 
 // ===== ===== ===== ===== CLASS --Version
@@ -32,6 +32,11 @@ class VersionParameter {
          return [...a, i];
       }, []);
       return new RegExp(`--(${titles.join("|")}) (\\d+)?`, "g");
+   }
+
+   replace(text) {
+      const match = this.getPattern().exec(text);
+      return match ? text.replace(match[0], "") : text;
    }
 
    getString(versionId) {

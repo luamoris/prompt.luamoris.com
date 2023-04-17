@@ -24,8 +24,16 @@
 
 ====
 
-constant.js
-Error.js
+(+) constant.js
+(+) Error.js
+
+====
+
+(+) Keyword.js
+(+) Keywords.js
+
+(-) TemplateString.js
+(-) TemplateHTML.js
 
 ====
 

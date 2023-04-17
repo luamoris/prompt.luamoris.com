@@ -1,6 +1,6 @@
 // ===== ===== ===== ===== IMPORT
-import PropmtError from "../Error.js";
-import { SLASH } from "../constant.js";
+import PropmtError from "../../helpers/Error.js";
+import { SLASH } from "../../helpers/constant.js";
 
 
 // ===== ===== ===== ===== MAIN PARAMETER CLASS
@@ -14,6 +14,11 @@ class Parameter {
 
    // rewrite
    getPattern() { return new RegExp(); }
+
+   replace(text) {
+      const match = this.getPattern().exec(text);
+      return match ? text.replace(match[0], "") : text;
+   }
 
    getString(value) {
       const argument = `${value.argument !== null ? " " + value.argument : ""}`;
