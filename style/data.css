@@ -1,0 +1,135 @@
+/* ============ FONTS ============ */
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap');
+
+/* ============ VALUES ============ */
+:root {
+   /* font */
+   --font-family: "Montserrat";
+
+   /* wrapper */
+   --pattern-img: url("../img/pattern.svg");
+   --pattern-size: 120px;
+   --pattern-opacity: 0.1;
+
+   /* app */
+   --app-padding-y: 40px;
+   --app-padding-x: 20px;
+
+   /* content */
+   --content-mw: 920px;
+
+   /* header */
+   --header-padding: 30px 0 40px 0;
+   --avatar-size: 100px;
+   --title-name-size: 20px;
+   --title-text-size: 10px;
+   --title-letter-spacing: 0.04em;
+   --title-line-height: 150%;
+
+   /* main */
+
+   /* footer */
+   --footer-margin: 20px 0 10px 0;
+   --copyright-size: 10px;
+   --copyright-color: rgba(255, 255, 255, .5);
+   --copyright-color-h: rgba(255, 255, 255, .7);
+}
+
+
+/* ============ COLORS ============ */
+:root {
+   /* base */
+   --selection: rgba(255, 255, 255, 0.2);
+   --tap-bg: rgba(0, 0, 0, 0);
+
+   /* wrapper */
+   --wrapper-bg: rgba(25, 26, 27, 1);
+
+   /* app */
+
+   /* content */
+
+   /* header */
+   --avatar-bg: rgba(255, 255, 255, 0.8);
+   --title-name-color: linear-gradient(125.83deg, #C01A56 0.05%, #C2800D 99%);
+   --title-text-color: rgba(255, 255, 255, 0.5);
+
+   /* main */
+
+   /* footer */
+}
+
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {
+      /* wrapper */
+      --pattern-size: 100px;
+   }
+}
+
+@media (max-width: 768px) {
+   :root {
+      /* wrapper */
+      --pattern-size: 80px;
+
+      /* app */
+      --app-padding-y: 20px;
+
+      /* header */
+      --header-padding: 20px 0 30px 0;
+      --avatar-size: 90px;
+      --title-name-size: 18px;
+      --title-text-size: 8px;
+      --title-letter-spacing: 0.04em;
+      --title-line-height: 150%;
+
+      /* footer */
+      --copyright-size: 8px;
+   }
+}
+
+@media (max-width: 500px) {
+   :root {
+      /* wrapper */
+      --pattern-size: 60px;
+
+      /* app */
+      --app-padding-y: 10px;
+      --app-padding-x: 10px;
+
+      /* header */
+      --header-padding: 20px 0 20px 0;
+      --avatar-size: 80px;
+      --title-name-size: 16px;
+      --title-text-size: 8px;
+      --title-letter-spacing: 0.02em;
+      --title-line-height: 150%;
+   }
+}
+
+@media (max-width: 425px) {
+   :root {
+      /* wrapper */
+      --pattern-size: 55px;
+   }
+}
+
+@media (max-width: 375px) {
+   :root {
+      /* wrapper */
+      --pattern-size: 50px;
+   }
+}
+
+@media (max-width: 320px) {
+   :root {
+      /* wrapper */
+      --pattern-size: 45px;
+   }
+}
+
+/* ============ END :) ============ */
