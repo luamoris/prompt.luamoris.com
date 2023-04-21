@@ -29,7 +29,16 @@
    --title-line-height: 150%;
 
    /* main */
-
+   --section-margin: 20px 0;
+   --caption-title: 20px;
+   --prompt-margin: 0 0 20px 0;
+   --prompt-text-margin: 0 20px 0 0;
+   --prompt-input-margin: 0 0 20px 0;
+   --prompt-settings-w: 200px;
+   --line-margin: 6px 0;
+   --line-h: 3px;
+   --result-content-margin: 20px 0 0 0;
+   --item-margin: 0 0 20px 0;
    /* footer */
    --footer-margin: 20px 0 10px 0;
    --copyright-size: 10px;
@@ -57,6 +66,10 @@
    --title-text-color: rgba(255, 255, 255, 0.5);
 
    /* main */
+   --caption-color: rgba(255, 255, 255, 0.8);
+   --prompt-input-bg: rgba(255, 255, 255, 0.05);
+   --prompt-output-bg: rgba(255, 255, 255, 0.05);
+   --line-bg: rgba(255, 255, 255, 0.05);
 
    /* footer */
 }
@@ -68,6 +81,15 @@
    :root {
       /* wrapper */
       --pattern-size: 100px;
+
+      /* header */
+      --header-padding: 20px 0 30px 0;
+
+      /* main */
+      --prompt-margin: 0 0 14px 0;
+      --prompt-text-margin: 0 10px 0 0;
+      --prompt-input-margin: 0 0 10px 0;
+      --item-margin: 0 0 10px 0;
    }
 }
 
@@ -80,12 +102,15 @@
       --app-padding-y: 20px;
 
       /* header */
-      --header-padding: 20px 0 30px 0;
       --avatar-size: 90px;
       --title-name-size: 18px;
       --title-text-size: 8px;
       --title-letter-spacing: 0.04em;
       --title-line-height: 150%;
+
+      /* main */
+      --prompt-text-margin: 0 0 14px 0;
+      --prompt-settings-w: 100%;
 
       /* footer */
       --copyright-size: 8px;
@@ -102,12 +127,19 @@
       --app-padding-x: 10px;
 
       /* header */
-      --header-padding: 20px 0 20px 0;
+      --header-padding: 10px 0 20px 0;
       --avatar-size: 80px;
       --title-name-size: 16px;
       --title-text-size: 8px;
       --title-letter-spacing: 0.02em;
       --title-line-height: 150%;
+
+      /* main */
+      --section-margin: 10px 0;
+
+      /* footer */
+      --footer-margin: 20px 0 0 0;
+      --copyright-size: 8px;
    }
 }
 
