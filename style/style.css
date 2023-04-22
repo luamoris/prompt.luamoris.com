@@ -277,7 +277,8 @@
 
 
 .prompt__text {
-   flex: 1 0 auto;
+   flex: 1 0;
+   width: calc(100% - 220px);
    display: flex;
    flex-direction: column;
    margin: var(--prompt-text-margin);
@@ -286,38 +287,120 @@
 /* PROMPT INPUT */
 
 .prompt-input {
-   flex: 1 0 auto;
+   flex: 1;
    margin: var(--prompt-input-margin);
    width: 100%;
+   height: 100%;
+}
+
+/* box */
+.prompt-input__content {
+   /* display: flex;
+   height: 100%; */
+   display: flex;
+   width: 100%;
+}
+
+/* textarea */
+.input-template {
+   padding: 30px;
+   min-height: 110px;
+   width: 100%;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 170%;
+   text-align: justify;
+   letter-spacing: 0.02em;
+
+   border-radius: 5px;
+   border: 2px solid rgba(255, 255, 255, 0.05);
+
+   color: rgba(255, 255, 255, 0.8);
    background-color: var(--prompt-input-bg);
 }
 
-.prompt-input__content {
-   height: 100px;
+._autosize {
+   overflow: hidden;
+   resize: none;
+   outline: none;
 }
+
+/* textarea placeholder*/
+.input-template::placeholder {
+   color: rgba(255, 255, 255, 0.4);
+}
+
 
 /* PROMPT OUTPUT */
 
 .prompt-output {
-   flex: 1 0 auto;
+   flex: 1 0 200px;
    width: 100%;
-   background-color: var(--prompt-output-bg);
+   height: 100%;
 }
 
 .prompt-output__content {
-   height: 300px;
+   width: 100%;
+   height: 100%;
+
+   border-radius: 5px;
+
+   background-color: var(--prompt-output-bg);
+}
+
+.prompt-template {
+   padding: 30px;
+   width: 100%;
+   height: 100%;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 170%;
+   text-align: justify;
+   letter-spacing: 0.02em;
+
+   color: rgba(255, 255, 255, 0.8);
+}
+
+.prompt-template a {
+   text-decoration: none;
+}
+
+.keyword {
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+.keyword_red {
+   color: rgba(226, 98, 74, 1);
+}
+
+.keyword_green {
+   color: rgba(76, 179, 73, 1);
+}
+
+.parameter {
+   font-weight: 600;
+   text-transform: lowercase;
+   color: rgba(99, 165, 234, 1);
 }
 
 /* PROMPT SETTINGS */
 
 .prompt__settings {
+   flex: 0 0 200px;
    width: var(--prompt-settings-w);
    /* clear */
    background-color: rgba(240, 157, 224, 0.1);
 }
 
 .settings__content {
-   height: 200px;
+   height: 300px;
 }
 
 /* PROMPT KEYWORDS */
@@ -448,6 +531,10 @@
 @media (max-width: 768px) {
    .prompt {
       flex-direction: column;
+   }
+
+   .prompt__text {
+      width: 100%;
    }
 }
 

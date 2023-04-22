@@ -97,10 +97,26 @@
                                     <!-- text -->
                                     <div class="prompt__text">
                                        <div class="prompt-input">
-                                          <div class="prompt-input__content"></div>
+                                          <div class="prompt-input__content">
+                                             <textarea id="inputTemplate" class="input-template _autosize"
+                                                placeholder="Example ..."></textarea>
+                                          </div>
                                        </div>
                                        <div class="prompt-output">
-                                          <div class="prompt-output__content"></div>
+                                          <div class="prompt-output__content">
+                                             <p id="promptTemplate" class="prompt-template">
+                                                <a class="keyword keyword_red" data-id="1" href="#1">food</a>
+                                                complete
+                                                <a class="keyword keyword_red" data-id="2" href="#1">food</a>
+                                                review, realistic products, warm lighting, detailing, foodcore design,
+                                                studio lighting, fully blurred clean studio background, dirty blurry
+                                                background with light
+                                                <a class="keyword keyword_green" data-id="3" href="#2">color</a>
+                                                gradient from dark to light from edges to center, high quality, 4K UHD
+                                                ::
+                                                <a class="parameter" data-id="4" href="#3">--v 4</a>
+                                             </p>
+                                          </div>
                                        </div>
                                     </div>
                                     <!-- settings -->
@@ -167,6 +183,7 @@
    </div>
 
    <!-- SCRIPT -->
+   <script type="module" src="./page.js"></script>
    <script type="module" src="./main.js"></script>
 </body>
 
