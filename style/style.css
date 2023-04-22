@@ -307,8 +307,8 @@
    justify-content: center;
    bottom: var(--prompt-padding-btn);
    right: var(--prompt-padding-btn);
-   width: var(--prompt-padding);
-   height: var(--prompt-padding);
+   width: 30px;
+   height: 30px;
    pointer-events: all;
    cursor: pointer;
    opacity: 0.5;
@@ -554,7 +554,10 @@
 }
 
 @media (max-width: 500px) {
-   :root {}
+   #btnRestart {
+      width: 24px;
+      height: 24px;
+   }
 }
 
 @media (max-width: 425px) {

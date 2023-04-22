@@ -156,6 +156,8 @@
       --output-mh: 80px;
       --input-mh: auto;
 
+      --prompt-padding-btn: 8px;
+
       /* prompt text */
       --prompt-font-size: 10px;
       --prompt-line-height: 160%;
@@ -188,6 +190,8 @@
 
       /* prompt box */
       --prompt-padding: 20px;
+
+      --prompt-padding-btn: 5px;
 
       /* prompt text */
       --prompt-font-size: 10px;
