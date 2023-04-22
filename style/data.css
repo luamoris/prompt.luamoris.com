@@ -31,14 +31,36 @@
    /* main */
    --section-margin: 20px 0;
    --caption-title: 20px;
+
    --prompt-margin: 0 0 20px 0;
    --prompt-text-margin: 0 20px 0 0;
    --prompt-input-margin: 0 0 20px 0;
-   --prompt-settings-w: 200px;
+
    --line-margin: 6px 0;
    --line-h: 3px;
+
    --result-content-margin: 20px 0 0 0;
    --item-margin: 0 0 20px 0;
+
+   --prompt-settings-margin: 20px;
+   --prompt-settings-w: 200px;
+
+   /* prompt box */
+   --prompt-padding: 30px;
+   --prompt-padding-btn: 10px;
+   --prompt-padding-bottom: calc(var(--prompt-padding) + (var(--prompt-padding-btn) * 2));
+   --prompt-border-radius: 5px;
+
+   --input-mh: calc(110px + (var(--prompt-padding-btn) * 2));
+   --input-border-w: 2px;
+
+   --output-mh: 200px;
+
+   /* prompt text */
+   --prompt-font-size: 12px;
+   --prompt-line-height: 170%;
+   --prompt-text-align: justify;
+   --prompt-letter-spacing: 0.02em;
 
    /* footer */
    --footer-margin: 20px 0 10px 0;
@@ -72,6 +94,17 @@
    --prompt-output-bg: rgba(255, 255, 255, 0.05);
    --line-bg: rgba(255, 255, 255, 0.05);
 
+   --keyword-red-color: rgba(226, 98, 74, 1);
+   --keyword-green-color: rgba(76, 179, 73, 1);
+   --parameter-color: rgba(99, 165, 234, 1);
+
+   /* prompt box */
+   --input-border-bg: rgba(255, 255, 255, 0.05);
+   --input-border-color-ph: rgba(255, 255, 255, 0.4);
+
+   /* prompt text */
+   --prompt-text-color: rgba(255, 255, 255, 0.8);
+
    /* footer */
 }
 
@@ -91,6 +124,8 @@
       --prompt-text-margin: 0 10px 0 0;
       --prompt-input-margin: 0 0 10px 0;
       --item-margin: 0 0 10px 0;
+
+      --prompt-settings-margin: 10px;
    }
 }
 
@@ -113,6 +148,17 @@
       --prompt-text-margin: 0 0 14px 0;
       --prompt-settings-w: 100%;
       --caption-title: 18px;
+
+      --prompt-settings-margin: 0;
+
+      /* prompt box */
+      --prompt-padding: 26px;
+      --output-mh: 80px;
+      --input-mh: auto;
+
+      /* prompt text */
+      --prompt-font-size: 10px;
+      --prompt-line-height: 160%;
 
       /* footer */
       --copyright-size: 8px;
@@ -140,6 +186,12 @@
       --section-margin: 10px 0;
       --caption-title: 16px;
 
+      /* prompt box */
+      --prompt-padding: 20px;
+
+      /* prompt text */
+      --prompt-font-size: 10px;
+
       /* footer */
       --footer-margin: 20px 0 0 0;
       --copyright-size: 8px;
@@ -150,6 +202,11 @@
    :root {
       /* wrapper */
       --pattern-size: 55px;
+
+      /* prompt box */
+
+      /* prompt text */
+      --prompt-font-size: 8px;
    }
 }
 

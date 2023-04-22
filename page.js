@@ -33,11 +33,9 @@ function getSize(textarea) {
 function autoResize(textarea) {
    textarea.style.height = "auto";
    const size = getSize(textarea);
-   console.log(size);
    const outContent = size.paddingTop + size.paddingBottom + (size.border * 2);
    const newHeight = size.boxSizing !== "border-box" ? (size.height + outContent) : size.height;
    textarea.style.height = `${newHeight}px`;
-   console.log(newHeight);
 }
 
 const inputText = new lmTextarea("inputTemplate");
