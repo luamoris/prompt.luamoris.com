@@ -32,7 +32,7 @@
    --prompt-padding: 30px;
    --prompt-padding-bottom: calc(var(--prompt-padding) + (var(--prompt-padding-btn) * 2));
    --prompt-input-mh: calc(120px + (var(--prompt-padding-btn) * 2));
-   --prompt-output-mh: 200px;
+   --prompt-output-mh: 100px;
 }
 
 /* ============ SPACE ============ */
@@ -196,15 +196,48 @@
 }
 
 
+/* ============ PARAMETERS ============ */
+
 .parameters {
    width: var(--parameters-w);
    flex: 0 0 var(--parameters-w);
    /* clear */
-   background-color: rgba(240, 157, 224, 0.1);
+   /* background-color: rgba(240, 157, 224, 0.1); */
 }
 
-.parameters__content {
-   height: 300px;
+.parameters__list {
+   width: 100%;
+}
+
+.param {
+   width: 100%;
+   height: 24px;
+   margin: 0 0 6px 0;
+
+   display: flex;
+}
+
+.param:last-child {
+   margin: 0;
+}
+
+
+.param__name {
+   width: 100px;
+   height: 100%;
+   background-color: var(--bg-01);
+}
+
+.param__title {}
+
+.param__icon {}
+
+
+.param__data {
+   margin: 0 0 0 10px;
+   width: 90px;
+   height: 100%;
+   background-color: var(--bg-01);
 }
 
 /* KEYWORDS */
