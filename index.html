@@ -22,9 +22,16 @@
    <link rel="apple-touch-icon" href="/favicon.ico">
    <link rel="apple-touch-icon-precomposed" href="/favicon.ico">
 
-   <link rel="stylesheet" href="./style/data.css">
+   <link rel="stylesheet" href="./style/root.css">
    <link rel="stylesheet" href="./style/normalize.css">
-   <link rel="stylesheet" href="./style/style.css">
+   <link rel="stylesheet" href="./style/help.css">
+   <link rel="stylesheet" href="./style/shell.css">
+   <link rel="stylesheet" href="./style/parts/header.css">
+   <link rel="stylesheet" href="./style/parts/main.css">
+   <link rel="stylesheet" href="./style/parts/title.css">
+   <link rel="stylesheet" href="./style/parts/space.css">
+   <link rel="stylesheet" href="./style/parts/result.css">
+   <link rel="stylesheet" href="./style/parts/footer.css">
 
    <title>PROMPT HELPER</title>
 </head>
@@ -41,12 +48,13 @@
                   <div class="content__container">
                      <div class="content__body">
 
+
                         <!-- 2-HEADER -->
                         <header class="header">
+
                            <!-- avatar -->
                            <div class="avatar no-copy">
-                              <div class="avatar__box">
-                                 <!-- svg -->
+                              <a href="http://luamoris.com" class="avatar__box" target="_blank">
                                  <svg class="logo" width="80" height="80" viewBox="0 0 80 80" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -62,101 +70,281 @@
                                        d="M48.7555 16.5524C48.2568 16.5524 47.8283 16.2216 47.4757 15.8691L41.1925 9.5858C40.4114 8.80473 39.1451 8.80473 38.364 9.5858L32.0808 15.8691C31.7282 16.2216 31.2997 16.5524 30.8011 16.5524H25.2535C24.5171 16.5524 23.9143 17.1515 23.9759 17.8853C24.0452 18.7105 23.4875 19.4807 22.6753 19.6423C11.4561 21.8739 3 31.7737 3 43.6485C3 44.5949 3.76713 45.3619 4.7134 45.3619H74.62C75.566 45.3619 76.3333 44.5949 76.3333 43.6485C76.3333 31.7488 67.8413 21.8323 56.5873 19.6283C55.7797 19.4702 55.2241 18.7054 55.293 17.8853C55.3546 17.1515 54.7517 16.5524 54.0154 16.5524H48.7555ZM16.0953 33.3143C16.0953 28.9749 19.613 25.4572 23.9524 25.4572C28.2918 25.4572 31.8095 28.9749 31.8095 33.3143C31.8095 37.6537 28.2918 41.1715 23.9524 41.1715C19.613 41.1715 16.0953 37.6537 16.0953 33.3143ZM55.3809 25.4572C51.0415 25.4572 47.5238 28.9749 47.5238 33.3143C47.5238 37.6537 51.0415 41.1715 55.3809 41.1715C59.72 41.1715 63.238 37.6537 63.238 33.3143C63.238 28.9749 59.72 25.4572 55.3809 25.4572Z"
                                        fill="white" />
                                  </svg>
-                              </div>
-                           </div>
-                           <!-- title -->
-                           <h2 class="title">
-                              <span class="title__name">LUAMORIS</span>
-                           </h2>
-                           <!-- subtitle -->
-                           <div class="subtitle">
-                              <a href="http://support.luamoris.com" class="subtitle__link" target="_blank">
-                                 suppor prompt helper
                               </a>
                            </div>
+
+                           <!-- name -->
+                           <h2 class="name">
+                              <a href="http://luamoris.com" class="name__text" target="_blank">luamoris</a>
+                           </h2>
+
+                           <!-- subtitle -->
+                           <div class="subtitle">
+                              <a href="http://donation.luamoris.com" class="subtitle__link" target="_blank">
+                                 development donation
+                              </a>
+                           </div>
+
                         </header>
+
 
                         <!-- 3-MAIN -->
                         <main class="main">
 
-                           <!-- caption -->
+                           <!-- title -->
                            <section class="section">
-                              <div class="caption">
-                                 <div class="icon icon_16">
-                                    <img class="icon__img" src="./img/light.svg" alt="Icon Light.">
+                              <div class="title">
+                                 <div class="icon">
+                                    <div class="icon-box icon-box-16">
+                                       <img class="icon-img" src="./img/light.svg" alt="Light icon.">
+                                    </div>
                                  </div>
-                                 <h1 class="caption__title">midjourney helper</h1>
+                                 <h1 class="title__h1">midjourney helper</h1>
                               </div>
                            </section>
 
-                           <!-- workspace -->
+                           <!-- space -->
                            <section class="section">
-                              <div class="workspace">
-                                 <!-- prompt -->
-                                 <div class="prompt">
-                                    <!-- text -->
-                                    <div class="prompt__text">
-                                       <div class="prompt-input">
-                                          <div class="prompt-input__content">
-                                             <textarea id="inputTemplate" class="input-template _autosize"
+                              <div class="space">
+
+                                 <!-- settings -->
+                                 <div class="settings">
+                                    <!-- prompt -->
+                                    <div class="prompt">
+                                       <!-- input -->
+                                       <div class="prompt__input-box">
+                                          <div class="prompt__input">
+                                             <textarea id="inputPrompt" class="prompt__input-text _autosize"
                                                 placeholder="Example ..."></textarea>
-                                             <div id="btnRestart" class="icon">
-                                                <img class="icon__img" src="./img/restart.svg" alt="Icon setting.">
+                                             <div class="btn-apply icon-box icon-box-12">
+                                                <img class="icon-box-12" src="./img/restart.svg" alt="Apply.">
+                                                <span class="btn-name">apply</span>
                                              </div>
                                           </div>
                                        </div>
-                                       <div class="prompt-output">
-                                          <div class="prompt-output__content">
-                                             <p id="promptTemplate" class="prompt-template">
-                                                <a class="keyword keyword_red" data-id="1" href="#1">food</a>
+                                       <!-- output -->
+                                       <div class="prompt__output-box">
+                                          <div class="prompt__output">
+                                             <p class="prompt-template">
+                                                <a href="#1" class="prompt-key _red" data-id="1">food</a>
                                                 complete
-                                                <a class="keyword keyword_red" data-id="2" href="#1">food</a>
+                                                <a href="#1" class="prompt-key _red" data-id="2">food</a>
                                                 review, realistic products, warm lighting, detailing, foodcore design,
                                                 studio lighting, fully blurred clean studio background, dirty blurry
                                                 background with light
-                                                <a class="keyword keyword_green" data-id="3" href="#2">color</a>
+                                                <a href="#2" class="prompt-key _green" data-id="3">color</a>
                                                 gradient from dark to light from edges to center, high quality, 4K UHD
                                                 ::
-                                                <a class="parameter" data-id="4" href="#3">--v 4</a>
+                                                <a href="#version" class="prompt-parameter _blue" data-id="4">--v 4</a>
                                              </p>
                                           </div>
                                        </div>
                                     </div>
-                                    <!-- settings -->
-                                    <div class="prompt__settings">
-                                       <div class="settings__content"></div>
+                                    <!-- parameters -->
+                                    <div class="parameters">
+                                       <div class="parameters__content"></div>
                                     </div>
                                  </div>
+
                                  <!-- keywords -->
                                  <div class="keywords">
-                                    <div class="keywords__content"></div>
+                                    <div class="keywords__content">
+                                       <ul class="keywords__list">
+                                          <!-- id-1 -->
+                                          <li id="1" class="keyword lock">
+                                             <div class="keyword__caption">
+                                                <!-- icon -->
+                                                <div class="keyword__icon icon-box icon-box-12">
+                                                   <img src="./img/key.svg" alt="Key icon." class="icon-img">
+                                                </div>
+                                                <!-- title -->
+                                                <div class="keyword__title">
+                                                   <div class="title-container"
+                                                      data-title="There will be a full name if it is more than a container.">
+                                                      <span class="title-name">food</span>
+                                                   </div>
+                                                </div>
+                                                <!-- status -->
+                                                <div class="keyword__status">
+                                                   <svg class="svg-lock" width="33" height="33" viewBox="0 0 33 33"
+                                                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <g clip-path="url(#clip0_603_3226)">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M8 9.00003C5.79086 9.00003 4 10.7909 4 13V29C4 31.2092 5.79086 33 8 33H26C28.2091 33 30 31.2092 30 29V13C30 10.7909 28.2091 9.00003 26 9.00003H8ZM17 25C19.2091 25 21 23.2092 21 21C21 18.7909 19.2091 17 17 17C14.7909 17 13 18.7909 13 21C13 23.2092 14.7909 25 17 25Z" />
+                                                         <path class="svg-lock-circle"
+                                                            d="M26 9C26 7.8181 25.7672 6.64778 25.3149 5.55585C24.8626 4.46392 24.1997 3.47176 23.364 2.63604C22.5282 1.80031 21.5361 1.13738 20.4441 0.685083C19.3522 0.232791 18.1819 -9.41792e-07 17 -7.86805e-07C15.8181 -6.31818e-07 14.6478 0.232791 13.5558 0.685084C12.4639 1.13738 11.4718 1.80031 10.636 2.63604C9.80031 3.47177 9.13738 4.46392 8.68508 5.55585C8.23279 6.64778 8 7.8181 8 9L12.5 9C12.5 8.40905 12.6164 7.82389 12.8425 7.27792C13.0687 6.73196 13.4002 6.23588 13.818 5.81802C14.2359 5.40016 14.732 5.06869 15.2779 4.84254C15.8239 4.6164 16.4091 4.5 17 4.5C17.5909 4.5 18.1761 4.61639 18.7221 4.84254C19.268 5.06869 19.7641 5.40015 20.182 5.81802C20.5998 6.23588 20.9313 6.73196 21.1575 7.27792C21.3836 7.82389 21.5 8.40905 21.5 9L26 9Z" />
+                                                      </g>
+                                                      <defs>
+                                                         <clipPath id="clip0_603_3226">
+                                                            <rect width="33" height="33" />
+                                                         </clipPath>
+                                                      </defs>
+                                                   </svg>
+                                                </div>
+                                             </div>
+                                             <div class="words">
+                                                <div class="words__box">
+                                                   <ul class="words__list _grid">
+                                                      <li class="word" data-id="0">
+                                                         <p class="word__name">burger</p>
+                                                         <div class="btn-delete icon-box icon-box-12">
+                                                            <img class="icon-img" src="./img/close.svg" alt="Delete">
+                                                         </div>
+                                                      </li>
+                                                      <li class="word" data-id="1">
+                                                         <p class="word__name">pizza</p>
+                                                         <div class="btn-delete icon-box icon-box-12">
+                                                            <img class="icon-img" src="./img/close.svg" alt="Delete">
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                   <div class="words__add">
+                                                      <input type="text" class="words__input" placeholder="your value">
+                                                      <div class="btn-add icon-box icon-box-12">
+                                                         <img class="icon-box-12" src="./img/add.svg" alt="Add">
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="buttons">
+                                                   <div class="btn-copy icon-box icon-box-20">
+                                                      <img class="icon-box-14" src="./img/copy.svg" alt="Copy">
+                                                   </div>
+                                                   <div class="btn-grid icon-box icon-box-20">
+                                                      <img class="icon-box-14" src="./img/grid.svg" alt="Grid">
+                                                      <img class="icon-box-14 icon-none" src="./img/list.svg"
+                                                         alt="List">
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <!-- id-2 -->
+                                          <li id="2" class="keyword">
+                                             <div class="keyword__caption">
+                                                <!-- icon -->
+                                                <div class="keyword__icon icon-box icon-box-12">
+                                                   <img src="./img/key.svg" alt="Key icon." class="icon-img">
+                                                </div>
+                                                <!-- title -->
+                                                <div class="keyword__title">
+                                                   <div class="title-container"
+                                                      data-title="There will be a full name if it is more than a container.">
+                                                      <span class="title-name">color</span>
+                                                   </div>
+                                                </div>
+                                                <!-- status -->
+                                                <div class="keyword__status">
+                                                   <svg class="svg-lock" width="33" height="33" viewBox="0 0 33 33"
+                                                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <g clip-path="url(#clip0_603_3226)">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M8 9.00003C5.79086 9.00003 4 10.7909 4 13V29C4 31.2092 5.79086 33 8 33H26C28.2091 33 30 31.2092 30 29V13C30 10.7909 28.2091 9.00003 26 9.00003H8ZM17 25C19.2091 25 21 23.2092 21 21C21 18.7909 19.2091 17 17 17C14.7909 17 13 18.7909 13 21C13 23.2092 14.7909 25 17 25Z" />
+                                                         <path class="svg-lock-circle"
+                                                            d="M26 9C26 7.8181 25.7672 6.64778 25.3149 5.55585C24.8626 4.46392 24.1997 3.47176 23.364 2.63604C22.5282 1.80031 21.5361 1.13738 20.4441 0.685083C19.3522 0.232791 18.1819 -9.41792e-07 17 -7.86805e-07C15.8181 -6.31818e-07 14.6478 0.232791 13.5558 0.685084C12.4639 1.13738 11.4718 1.80031 10.636 2.63604C9.80031 3.47177 9.13738 4.46392 8.68508 5.55585C8.23279 6.64778 8 7.8181 8 9L12.5 9C12.5 8.40905 12.6164 7.82389 12.8425 7.27792C13.0687 6.73196 13.4002 6.23588 13.818 5.81802C14.2359 5.40016 14.732 5.06869 15.2779 4.84254C15.8239 4.6164 16.4091 4.5 17 4.5C17.5909 4.5 18.1761 4.61639 18.7221 4.84254C19.268 5.06869 19.7641 5.40015 20.182 5.81802C20.5998 6.23588 20.9313 6.73196 21.1575 7.27792C21.3836 7.82389 21.5 8.40905 21.5 9L26 9Z" />
+                                                      </g>
+                                                      <defs>
+                                                         <clipPath id="clip0_603_3226">
+                                                            <rect width="33" height="33" />
+                                                         </clipPath>
+                                                      </defs>
+                                                   </svg>
+                                                </div>
+                                             </div>
+                                             <div class="words">
+                                                <div class="words__box">
+                                                   <ul class="words__list _list">
+                                                      <li class="word _clear" data-id="0"></li>
+                                                      <li class="word" data-id="1">
+                                                         <p class="word__name">red</p>
+                                                         <div class="btn-delete icon-box icon-box-12">
+                                                            <img class="icon-img" src="./img/close.svg" alt="Delete">
+                                                         </div>
+                                                      </li>
+                                                      <li class="word" data-id="2">
+                                                         <p class="word__name">yellow</p>
+                                                         <div class="btn-delete icon-box icon-box-12">
+                                                            <img class="icon-img" src="./img/close.svg" alt="Delete">
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                   <div class="words__add">
+                                                      <input type="text" class="words__input" placeholder="your value">
+                                                      <div class="btn-add icon-box icon-box-12">
+                                                         <img class="icon-box-12" src="./img/add.svg" alt="Add">
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="buttons">
+                                                   <div class="btn-copy icon-box icon-box-20">
+                                                      <img class="icon-box-14" src="./img/copy.svg" alt="Copy icon.">
+                                                   </div>
+                                                   <div class="btn-grid icon-box icon-box-20">
+                                                      <img class="icon-box-14 icon-none" src="./img/grid.svg"
+                                                         alt="Grid icon.">
+                                                      <img class="icon-box-14" src="./img/list.svg" alt="List icon.">
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <!-- end -->
+                                       </ul>
+                                    </div>
                                  </div>
+
                               </div>
                            </section>
 
                            <!-- result -->
                            <section class="section">
                               <div class="result">
-                                 <div class="result__header">
-                                    <div class="icon icon_24">
-                                       <img class="icon__img" src="./img/tune.svg" alt="Icon setting.">
+                                 <div class="result__title">
+                                    <div class="icon-box icon-box-24">
+                                       <img class="icon-img" src="./img/tune.svg" alt="Setting.">
                                     </div>
                                  </div>
                                  <div class="result__line"></div>
                                  <div class="result__content">
-                                    <ul class="result__list">
-                                       <li class="result_item">
-                                          <div class="result_prompt"></div>
+                                    <div class="result__list">
+                                       <li class="result__prompt" data-result="1">
+                                          <p class="prompt-template">
+                                             <a href="#1" class="prompt-key" data-id="1">burger</a>
+                                             complete
+                                             <a href="#1" class="prompt-key" data-id="2">burger</a>
+                                             review, realistic products, warm lighting, detailing, foodcore design,
+                                             studio lighting, fully blurred clean studio background, dirty blurry
+                                             background with light
+                                             <a href="#2" class="prompt-key" data-id="3">blue</a>
+                                             gradient from dark to light from edges to center, high quality, 4K UHD
+                                             ::
+                                             <a href="#version" class="prompt-parameter" data-id="4">--v 4</a>
+                                          </p>
+                                          <div class="btn-copy icon-box icon-box-16">
+                                             <img class="icon-img" src="./img/copy.svg" alt="Copy.">
+                                          </div>
                                        </li>
-                                       <li class="result_item">
-                                          <div class="result_prompt"></div>
+                                       <li class="result__prompt" data-result="2">
+                                          <p class="prompt-template">
+                                             <a href="#1" class="prompt-key" data-id="1">pizaa</a>
+                                             complete
+                                             <a href="#1" class="prompt-key" data-id="2">pizaa</a>
+                                             review, realistic products, warm lighting, detailing, foodcore design,
+                                             studio lighting, fully blurred clean studio background, dirty blurry
+                                             background with light
+                                             <a href="#2" class="prompt-key" data-id="3">yellow</a>
+                                             gradient from dark to light from edges to center, high quality, 4K UHD
+                                             ::
+                                             <a href="#version" class="prompt-parameter" data-id="4">--v 4</a>
+                                          </p>
+                                          <div class="btn-copy icon-box icon-box-16">
+                                             <img class="icon-img" src="./img/copy.svg" alt="Copy.">
+                                          </div>
                                        </li>
-                                    </ul>
+                                    </div>
                                  </div>
                               </div>
                            </section>
 
                         </main>
+
 
                         <!-- 4-FOOTER -->
                         <footer class="footer">
@@ -164,12 +352,12 @@
                            <div class="copyright">
                               <p class="copyright__box">
                                  <span class="copyright__item">© copyright</span>
-                                 <a class="copyright__item copyright_link" href="http://luamoris.com"
-                                    target="_blank">luamoris.com
+                                 <a class="copyright__link" href="http://luamoris.com" target="_blank">luamoris.com
                                  </a>
                               </p>
                            </div>
                         </footer>
+
 
                      </div>
                   </div>
@@ -187,7 +375,7 @@
 
    <!-- SCRIPT -->
    <script type="module" src="./page.js"></script>
-   <script type="module" src="./main.js"></script>
+   <!-- <script type="module" src="./main.js"></script> -->
 </body>
 
 </html>

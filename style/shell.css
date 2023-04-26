@@ -1,0 +1,107 @@
+/* ============ SHELL ============ */
+
+#wrapper {
+   z-index: 10;
+   position: relative;
+   min-width: 320px;
+   min-height: 100%;
+}
+
+/* ========== APP ========== */
+
+.app {
+   min-height: 100vh;
+   width: 100%;
+}
+
+.app__container {
+   margin: 0 auto;
+   padding: var(--app-padding-y) var(--app-padding-x);
+   max-width: calc(1400px + (2 * var(--app-padding-x)));
+}
+
+.app__body {
+   display: flex;
+   min-height: calc(100vh - (2 * var(--app-padding-y)));
+   width: 100%;
+}
+
+/* ========== CONTENT ========== */
+
+.content {
+   display: flex;
+   flex: 1 0 auto;
+   width: 100%;
+}
+
+.content__container {
+   overflow: hidden;
+   display: flex;
+   flex: 1 1 auto;
+   margin: 0 auto;
+   max-width: var(--content-mw);
+}
+
+.content__body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+}
+
+/* ========== screen ========== */
+
+.screen {
+   z-index: 1;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}
+
+.screen__box {
+   width: 100%;
+   height: 100%;
+   background: var(--pattern-img) repeat;
+   background-size: var(--pattern-size) var(--pattern-size);
+   opacity: var(--pattern-opacity);
+}
+
+.screen_unuse {
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   pointer-events: none;
+   user-select: none;
+   cursor: none;
+}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

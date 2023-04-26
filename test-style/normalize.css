@@ -15,11 +15,6 @@ html {
    background-color: var(--wrapper-bg);
 }
 
-::selection {
-   text-shadow: none;
-   background-color: var(--selection);
-}
-
 html,
 body,
 div,
@@ -178,11 +173,20 @@ textarea {
    clear: both;
 }
 
+::selection {
+   text-shadow: none;
+   background: #b3d4fc;
+}
+
+/* Box Model */
+
 *,
 *::before,
 *::after {
    box-sizing: border-box;
 }
+
+/* A better looking default horizontal rule */
 
 hr {
    display: block;
@@ -196,6 +200,12 @@ hr {
 button,
 input {
    outline: none;
+}
+
+/* Selection */
+
+::selection {
+   background-color: var(--selection);
 }
 
 /* ============ END :) ============ */

@@ -1,0 +1,111 @@
+/* ============ FONTS ============ */
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap');
+
+
+/* ============ VALUES ============ */
+
+:root {
+   --font-family: "Montserrat";
+
+   --pattern-img: url("../img/pattern.svg");
+   --pattern-size: 120px;
+   --pattern-opacity: 0.1;
+
+   --app-padding-y: 40px;
+   --app-padding-x: 20px;
+
+   --content-mw: 920px;
+
+   --h2-s: 20px;
+   --h4-s: 12px;
+   --h5-s: 10px;
+   --letter-spacing: 0.04em;
+   --line-height: 150%;
+
+   --border-s: 2px;
+   --link-border-s: 1px;
+
+   --gap: 20px;
+
+   --icon-radius: 2px;
+
+   --wrapper-bg: rgba(25, 26, 27, 1);
+   --selection: rgba(255, 255, 255, 0.2);
+   --tap-bg: rgba(0, 0, 0, 0);
+   --border-bg: rgba(255, 255, 255, 0.2);
+
+   --h5-color: rgba(255, 255, 255, 0.5);
+   --h5-color-h: rgba(255, 255, 255, 0.7);
+   --color-main: rgba(255, 255, 255, 0.8);
+   --color-gradient: linear-gradient(125.83deg, #C01A56 0.05%, #C2800D 99%);
+
+   --bg-1: rgba(255, 255, 255, 0.1);
+   --bg-4: rgba(255, 255, 255, 0.4);
+   --bg-01: rgba(255, 255, 255, 0.01);
+   --bg-05: rgba(255, 255, 255, 0.05);
+
+   --red: rgba(226, 98, 74, 1);
+   --green: rgba(76, 179, 73, 1);
+   --green-bg-05: rgba(76, 179, 73, 0.05);
+   --green-bg-1: rgba(76, 179, 73, 0.1);
+   --blue: rgba(99, 165, 234, 1);
+}
+
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {
+      --pattern-size: 100px;
+   }
+}
+
+@media (max-width: 768px) {
+   :root {
+      --pattern-size: 80px;
+
+      --app-padding-y: 20px;
+
+      --h2-s: 18px;
+      --h5-s: 8px;
+
+      --gap: 10px;
+   }
+}
+
+@media (max-width: 500px) {
+   :root {
+      --pattern-size: 60px;
+
+      --app-padding-y: 10px;
+      --app-padding-x: 10px;
+
+      --h2-s: 16px;
+      --h4-s: 10px;
+      --h5-s: 8px;
+      --letter-spacing: 0.02em;
+      --line-height: 150%;
+   }
+}
+
+@media (max-width: 425px) {
+   :root {
+      --pattern-size: 55px;
+   }
+}
+
+@media (max-width: 375px) {
+   :root {
+      --pattern-size: 50px;
+   }
+}
+
+@media (max-width: 320px) {
+   :root {
+      --pattern-size: 45px;
+   }
+}
+
+/* ============ END :) ============ */

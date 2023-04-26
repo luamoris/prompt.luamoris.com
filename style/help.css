@@ -1,0 +1,101 @@
+/* ============ ICON ============ */
+
+.icon {}
+
+.icon-box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.icon-box-10 {
+   width: 10px;
+   height: 10px;
+}
+
+.icon-box-12 {
+   width: 12px;
+   height: 12px;
+}
+
+.icon-box-14 {
+   width: 14px;
+   height: 14px;
+}
+
+.icon-box-16 {
+   width: 16px;
+   height: 16px;
+}
+
+.icon-box-18 {
+   width: 18px;
+   height: 18px;
+}
+
+.icon-box-20 {
+   width: 20px;
+   height: 20px;
+}
+
+.icon-box-22 {
+   width: 22px;
+   height: 22px;
+}
+
+.icon-box-24 {
+   width: 24px;
+   height: 24px;
+}
+
+.icon-box-26 {
+   width: 26px;
+   height: 26px;
+}
+
+.icon-box-28 {
+   width: 28px;
+   height: 28px;
+}
+
+.icon-box-30 {
+   width: 30px;
+   height: 30px;
+}
+
+.icon-img {
+   width: 100%;
+   height: 100%;
+}
+
+.icon-none {
+   display: none;
+}
+
+.btn-name {
+   margin-left: 4px;
+}
+
+/* ============ NO ============ */
+
+.no-all {
+   cursor: none;
+   user-select: none;
+   pointer-events: none;
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+}
+
+.no-copy {
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;
+}
+
+.no-event {
+   pointer-events: none;
+}
+
+/* ============ END :) ============ */

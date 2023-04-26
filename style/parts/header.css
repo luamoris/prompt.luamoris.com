@@ -1,0 +1,157 @@
+/* ============ ROOT ============ */
+
+:root {
+   --header-padding: 30px 0 40px 0;
+   --avatar-size: 100px;
+}
+
+/* ============ HEADER ============ */
+
+.header {
+   width: 100%;
+   padding: var(--header-padding);
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+/* AVATAR */
+
+.avatar {
+   width: var(--avatar-size);
+   height: var(--avatar-size);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.avatar__box {
+   width: 80%;
+   height: 80%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   text-decoration: none;
+}
+
+.logo {
+   width: 100%;
+   cursor: pointer;
+}
+
+.logo path {
+   fill: var(--color-main);
+}
+
+/* NAME */
+
+.name {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.name__text {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 900;
+   font-size: var(--h2-s);
+   line-height: var(--line-height);
+   letter-spacing: var(--letter-spacing);
+
+   background-clip: text;
+   text-transform: uppercase;
+   text-decoration: none;
+   text-fill-color: transparent;
+   background: var(--color-gradient);
+
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+/* SUBTITLE */
+
+.subtitle {
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.subtitle__link {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 700;
+   font-size: var(--h5-s);
+   line-height: var(--line-height);
+   letter-spacing: var(--letter-spacing);
+
+   text-decoration: none;
+   text-transform: uppercase;
+
+   border-bottom: var(--link-border-s) solid var(--h5-color);
+   color: var(--h5-color);
+
+   transition: color 150ms ease-in-out;
+}
+
+.subtitle__link:hover {
+   color: var(--h5-color-h);
+}
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {
+   .subtitle__link {
+      transition: transform 150ms ease-in-out;
+   }
+
+   .subtitle__link:active {
+      transform: scale(.98);
+   }
+}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {
+      --header-padding: 20px 0 30px 0;
+   }
+}
+
+@media (max-width: 768px) {
+   :root {
+      --avatar-size: 90px;
+   }
+}
+
+@media (max-width: 500px) {
+   :root {
+      --header-padding: 10px 0 20px 0;
+      --avatar-size: 80px;
+   }
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

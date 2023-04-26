@@ -1,0 +1,56 @@
+/* ============ ROOT ============ */
+/* ============ TITLE ============ */
+
+.title {
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.title__h1 {
+   margin: 0 10px;
+
+   font-family: "Montserrat";
+   font-size: var(--h2-s);
+   font-style: normal;
+   font-weight: 900;
+   letter-spacing: var(--letter-spacing);
+
+   text-transform: uppercase;
+
+   color: var(--main-color);
+}
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

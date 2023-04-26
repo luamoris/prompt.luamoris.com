@@ -1,0 +1,121 @@
+/* ============ ROOT ============ */
+
+:root {
+   --footer-margin: 20px 0 10px 0;
+}
+
+/* ============ FOOTER ============ */
+
+.footer {
+   width: 100%;
+   margin: var(--footer-margin);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.copyright {
+   padding: 5px;
+}
+
+.copyright__box {
+   display: flex;
+
+   font-family: "Montserrat";
+   font-size: var(--h5-s);
+   font-style: normal;
+   font-weight: 700;
+
+   color: var(--h5-color);
+}
+
+.copyright__item {
+   margin: 0 2px;
+
+   text-transform: capitalize;
+
+   color: inherit;
+}
+
+.copyright__link {
+   margin: 0 2px;
+
+   overflow: hidden;
+   display: block;
+   position: relative;
+
+   text-decoration: none;
+   text-transform: uppercase;
+
+   color: var(--h5-color);
+
+   transition: color 150ms ease-out;
+}
+
+.copyright__link:hover {
+   color: var(--h5-color-h);
+}
+
+.copyright__link::after {
+   content: "";
+   display: block;
+
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: var(--link-border-s);
+
+   border-radius: 1px;
+
+   background-color: var(--h5-color);
+   transform: translateX(-105%);
+
+   transition: transform 150ms ease-out;
+}
+
+.copyright__link:hover::after {
+   transform: translateX(0);
+}
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {
+   .copyright__link {
+      transition: transform 150ms ease-in-out;
+   }
+
+   .copyright__link:active {
+      transform: scale(.98);
+   }
+}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {
+      --footer-margin: 20px 0 0 0;
+   }
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

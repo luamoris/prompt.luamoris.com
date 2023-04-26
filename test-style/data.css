@@ -1,5 +1,39 @@
 /* ============ FONTS ============ */
 
+/* ============ ROOT ============ */
+/* ============ HEADER ============ */
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */
+
 /* Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap');
 
@@ -51,7 +85,7 @@
    --prompt-padding-bottom: calc(var(--prompt-padding) + (var(--prompt-padding-btn) * 2));
    --prompt-border-radius: 5px;
 
-   --input-mh: calc(110px + (var(--prompt-padding-btn) * 2));
+   --input-mh: calc(120px + (var(--prompt-padding-btn) * 2));
    --input-border-w: 2px;
 
    --output-mh: 200px;
@@ -156,10 +190,8 @@
       --output-mh: 80px;
       --input-mh: auto;
 
-      --prompt-padding-btn: 8px;
-
       /* prompt text */
-      --prompt-font-size: 10px;
+      --prompt-font-size: 11px;
       --prompt-line-height: 160%;
 
       /* footer */
@@ -191,11 +223,6 @@
       /* prompt box */
       --prompt-padding: 20px;
 
-      --prompt-padding-btn: 5px;
-
-      /* prompt text */
-      --prompt-font-size: 10px;
-
       /* footer */
       --footer-margin: 20px 0 0 0;
       --copyright-size: 8px;
@@ -206,11 +233,6 @@
    :root {
       /* wrapper */
       --pattern-size: 55px;
-
-      /* prompt box */
-
-      /* prompt text */
-      --prompt-font-size: 8px;
    }
 }
 

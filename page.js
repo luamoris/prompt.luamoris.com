@@ -38,5 +38,5 @@ function autoResize(textarea) {
    textarea.style.height = `${newHeight}px`;
 }
 
-const inputText = new lmTextarea("inputTemplate");
+const inputText = new lmTextarea("inputPrompt");
 inputText.addEvent(() => autoResize(inputText.textarea))
