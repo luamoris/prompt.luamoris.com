@@ -40,3 +40,56 @@ function autoResize(textarea) {
 
 const inputText = new lmTextarea("inputPrompt");
 inputText.addEvent(() => autoResize(inputText.textarea))
+
+
+// anchor-link
+function selectionAnchor(event) {
+   event.preventDefault();
+   const link = event.target;
+   const targetId = link.getAttribute('href');
+   const targetBlock = document.querySelector(targetId);
+   if (targetBlock) {
+      targetBlock.classList.add('highlighted');
+      setTimeout(() => {
+         targetBlock.classList.remove('highlighted');
+      }, 2000);
+   }
+}
+
+const anchorLinks = document.querySelectorAll(".anchor-link");
+anchorLinks.forEach(link => {
+   link.addEventListener("click", selectionAnchor);
+});
+
+
+// keywords
+
+function createBtnHTML({ className, size, path, alt }) {
+   const btn = document.createElement("div");
+   btn.classList.add(className, `icon-box`, `icon-box-${size}`);
+   const img = document.createElement("img");
+   img.classList.add(`icon-box-${size}`);
+   img.src = path;
+   img.alt = alt;
+   btn.append(img);
+   return btn;
+}
+
+function createWordHTML({ id, name }) {
+   const word = document.createElement("li");
+   word.classList.add("word");
+   word.setAttribute("data-id", id);
+   const wordName = document.createElement("p");
+   wordName.classList.add("word__name");
+   wordName.innerText = name;
+   const deleteBtn = createBtnHTML({
+      className: "btn-delete",
+      size: 12,
+      path: "./img/close.svg",
+      alt: "Delete icon.",
+   })
+   word.append(wordName, deleteBtn);
+   return word;
+}
+
+const keywordList = document.querySelectorAll(".keyword");

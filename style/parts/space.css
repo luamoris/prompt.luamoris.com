@@ -218,7 +218,6 @@
 
 .keywords__content {
    width: 100%;
-   padding: var(--keywords-padding);
 }
 
 .keywords__list {
@@ -233,10 +232,35 @@
 .keyword {
    width: 100%;
    min-height: var(--keyword-mh);
+   padding: var(--keywords-padding);
    margin: 5px 0;
 
    display: flex;
    align-items: flex-start;
+
+   border-radius: var(--icon-radius);
+}
+
+.keyword.highlighted {
+   animation: select 2000ms ease-out;
+}
+
+@keyframes select {
+   0% {
+      background-color: rgba(255, 255, 255, 0);
+   }
+
+   40% {
+      background-color: rgba(255, 255, 255, 0.05);
+   }
+
+   60% {
+      background-color: rgba(255, 255, 255, 0.05);
+   }
+
+   95% {
+      background-color: rgba(255, 255, 255, 0);
+   }
 }
 
 .keyword.lock {}
@@ -514,9 +538,8 @@
    cursor: pointer;
 
    border-radius: var(--icon-radius);
-   background-color: var(--bg-05);
+   background-color: var(--bg-01);
 }
-
 
 
 .buttons {
@@ -543,10 +566,197 @@
    opacity: 0.3;
 }
 
+/* ============ RESULT ============ */
+
+.result {
+   width: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.result__title {
+   width: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.result__line {
+   margin: 6px 0;
+   width: 100%;
+   height: 3px;
+
+   border-radius: var(--icon-radius);
+   background-color: var(--bg-05);
+}
+
+
+.result__content {
+   margin: var(--gap);
+   width: 100%;
+}
+
+.result__list {
+   width: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.result__prompt {
+   position: relative;
+   margin: calc(var(--gap) / 2);
+   width: 100%;
+
+   border: var(--link-border-s) solid transparent;
+   border-radius: var(--icon-radius);
+   background-color: var(--bg-05);
+
+   cursor: pointer;
+}
+
+.result__prompt .prompt-template {
+   padding: 20px 30px 20px 20px;
+}
+
+.result__prompt .prompt-key {
+   text-decoration: none;
+   text-transform: none;
+}
+
+.result__prompt .btn-copy {
+   position: absolute;
+   right: 4px;
+   top: 7px;
+   opacity: 0.5;
+   background-color: transparent;
+}
 
 /* ============ ANIMATION ============ */
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+   .result__prompt {
+      transition: background 200ms ease-in-out, border 200ms ease-in-out, transform 100ms ease-in-out;
+   }
+
+   .result__prompt:hover {
+      background-color: var(--bg-08);
+      border: var(--link-border-s) solid var(--bg-1);
+   }
+
+   .result__prompt:active {
+      transform: scale(.99);
+   }
+
+   @keyframes shake {
+      0% {
+         transform: translate(.5px, .5px) rotate(0deg);
+      }
+
+      10% {
+         transform: translate(-.5px, -.5px) rotate(-1deg);
+      }
+
+      20% {
+         transform: translate(-.5px, 0px) rotate(1deg);
+      }
+
+      30% {
+         transform: translate(.5px, .5px) rotate(0deg);
+      }
+
+      40% {
+         transform: translate(.5px, -.5px) rotate(1deg);
+      }
+
+      50% {
+         transform: translate(-.5px, .5px) rotate(-1deg);
+      }
+
+      60% {
+         transform: translate(-.5px, .5px) rotate(0deg);
+      }
+
+      70% {
+         transform: translate(.5px, .5px) rotate(-1deg);
+      }
+
+      80% {
+         transform: translate(-.5px, -.5px) rotate(1deg);
+      }
+
+      90% {
+         transform: translate(.5px, .5px) rotate(0deg);
+      }
+
+      100% {
+         transform: translate(.5px, -.5px) rotate(-1deg);
+      }
+   }
+
+   .result__prompt .btn-copy {
+      transition: opacity 200ms ease-in-out;
+   }
+
+   .result__prompt:hover .btn-copy {
+      opacity: 1;
+      animation: shake 500ms infinite;
+   }
+
+   .buttons .btn-copy:hover,
+   .buttons .btn-grid:hover {
+      transition: background 150ms ease-out, transform 100ms ease-in-out;
+   }
+
+   .buttons .btn-copy img,
+   .buttons .btn-grid img {
+      transition: opacity 150ms ease-out;
+   }
+
+   .buttons .btn-copy:hover,
+   .buttons .btn-grid:hover {
+      background-color: var(--bg-08);
+   }
+
+   .buttons .btn-copy:hover img,
+   .buttons .btn-grid:hover img {
+      opacity: .8;
+   }
+
+   .buttons .btn-copy:active,
+   .buttons .btn-grid:active {
+      transform: scale(.95);
+   }
+
+   .btn-add {
+      transition: background 120ms ease-out;
+   }
+
+   .btn-add:hover {
+      background-color: var(--bg-05);
+   }
+
+   .btn-add:active {
+      transform: scale(.95);
+   }
+
+   .btn-delete {
+      transition: background 100ms ease-in-out;
+   }
+
+   .btn-delete:hover {
+      border-radius: var(--border-s);
+      background-color: var(--color-main);
+   }
+}
 
 /* ============ MEDIA ============ */
 
@@ -598,6 +808,10 @@
 
    .btn-delete {
       margin: 1px 0 1px var(--keyword-icon-margin);
+   }
+
+   .words__add {
+      margin: 10px 20px 0 2px;
    }
 }
 

@@ -1,0 +1,33 @@
+/* ============ ROOT ============ */
+/* ============ {title} ============ */
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */
