@@ -44,7 +44,7 @@ inputText.addEvent(() => autoResize(inputText.textarea))
 
 // anchor-link
 function selectionAnchor(event) {
-   event.preventDefault();
+   // event.preventDefault();
    const link = event.target;
    const targetId = link.getAttribute('href');
    const targetBlock = document.querySelector(targetId);
