@@ -1,3 +1,16 @@
+// Select
+function logData(data) {
+   console.log(data);
+}
+
+const formVersionId = "formVersion";
+const formVersion = new LmSelect(formVersionId);
+formVersion.init(logData);
+
+const formAspectId = "formAspect";
+const formAspect = new LmSelect(formAspectId);
+formAspect.init(logData);
+
 // Textarea
 
 class lmTextarea {

@@ -1,0 +1,156 @@
+/* ============ ROOT ============ */
+
+:root {
+   --droptdown-3: 6px 5px 0px 5px;
+}
+
+/* ============ SELECT ============ */
+
+.dropdown {
+   box-sizing: border-box;
+   position: relative;
+}
+
+.dropdown-btn {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 700;
+   font-size: var(--h5-s);
+   line-height: var(--line-height);
+   letter-spacing: var(--letter-spacing);
+   text-transform: none;
+   color: var(--green);
+}
+
+.dropdown-btn {
+   position: relative;
+   display: block;
+
+   box-sizing: inherit;
+   padding: 4px calc(6px + 16px) 4px 6px;
+   width: 100%;
+   height: 100%;
+
+   outline: none;
+   border: none;
+
+   text-align: left;
+
+   cursor: pointer;
+
+   border-radius: var(--border-s);
+   border: var(--link-border-s) solid transparent;
+   background: transparent;
+}
+
+.dropdown-btn:focus,
+.dropdown-btn._focus {
+   border-color: var(--green-1);
+   background-color: var(--green-1);
+}
+
+.dropdown-btn::after {
+   content: "";
+
+   position: absolute;
+   top: calc(50% + 1px);
+   right: 7px;
+   transform: translateY(-50%);
+
+   width: 0;
+   height: 0;
+
+   border-radius: 1px;
+   border-width: var(--droptdown-3);
+   border-color: var(--green) transparent transparent transparent;
+   border-style: solid;
+
+   pointer-events: none;
+}
+
+.dropdown-input {
+   display: none;
+}
+
+.dropdown-list {
+   display: none;
+
+   z-index: 1;
+   overflow: hidden;
+   position: absolute;
+
+   box-sizing: inherit;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+
+   top: 24px;
+
+   list-style-type: none;
+}
+
+.dropdown-list._visible {
+   display: block;
+}
+
+.dropdown-item {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 500;
+   font-size: var(--h5-s);
+   line-height: var(--line-height);
+   letter-spacing: var(--letter-spacing);
+   text-transform: none;
+   color: var(--h5-color-h);
+
+}
+
+.dropdown-item {
+   box-sizing: inherit;
+   padding: 5px 6px;
+   margin: 0;
+
+   border-bottom: var(--link-border-s) solid var(--green-1);
+   background: rgba(36, 37, 38, 1);
+
+   cursor: pointer;
+}
+
+.dropdown-item:hover {
+   color: var(--blue);
+   background: rgba(40, 54, 68, 1);
+}
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {
+      --droptdown-3: 5px 4px 0px 4px;
+   }
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

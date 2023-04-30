@@ -33,6 +33,8 @@
    <link rel="stylesheet" href="./style/parts/result.css">
    <link rel="stylesheet" href="./style/parts/footer.css">
 
+   <link rel="stylesheet" href="./style/elements/select.css">
+
    <title>PROMPT HELPER</title>
 </head>
 
@@ -150,14 +152,51 @@
                                              <div class="param__name">
                                                 <h4 class="param__title">version</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formVersion" class="param__data">
+                                                <div class="dropdown">
+                                                   <button class="dropdown-btn" data-value="5">version 5</button>
+                                                   <input type="text" name="dropdown-input" class="dropdown-input"
+                                                      value="">
+                                                   <ul class="dropdown-list">
+                                                      <li class="dropdown-item" data-value="1">version 1</li>
+                                                      <li class="dropdown-item" data-value="2">version 2</li>
+                                                      <li class="dropdown-item" data-value="3">version 3</li>
+                                                      <li class="dropdown-item" data-value="4">version 4</li>
+                                                      <li class="dropdown-item" data-value="5">version 5</li>
+                                                      <li class="dropdown-item" data-value="6">niji</li>
+                                                      <li class="dropdown-item" data-value="7">test</li>
+                                                      <li class="dropdown-item" data-value="8">testp</li>
+                                                   </ul>
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- aspect -->
                                           <li id="aspect" class="param">
                                              <div class="param__name">
                                                 <h4 class="param__title">aspect</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formAspect" class="param__data">
+                                                <div class="dropdown">
+                                                   <button class="dropdown-btn" data-value="1:1">1:1</button>
+                                                   <input type="text" name="dropdown-input" class="dropdown-input"
+                                                      value="">
+                                                   <ul class="dropdown-list">
+                                                      <li class="dropdown-item" data-value="1:1">1:1</li>
+                                                      <li class="dropdown-item" data-value="1:2">1:2</li>
+                                                      <li class="dropdown-item" data-value="2:3">2:3</li>
+                                                      <li class="dropdown-item" data-value="2:5">2:5</li>
+                                                      <li class="dropdown-item" data-value="4:5">4:5</li>
+                                                      <li class="dropdown-item" data-value="4:7">4:7</li>
+                                                      <li class="dropdown-item" data-value="2:1">2:1</li>
+                                                      <li class="dropdown-item" data-value="3:2">3:2</li>
+                                                      <li class="dropdown-item" data-value="5:4">5:4</li>
+                                                      <li class="dropdown-item" data-value="5:2">5:2</li>
+                                                      <li class="dropdown-item" data-value="7:4">7:4</li>
+                                                      <li class="dropdown-item" data-value="9:16">9:16</li>
+                                                      <li class="dropdown-item" data-value="16:9">16:9</li>
+                                                   </ul>
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- quality -->
                                           <li id="quality" class="param">
@@ -467,6 +506,9 @@
    <div class="screen screen_unuse">
       <div class="screen__box"></div>
    </div>
+
+   <!-- Import LmSelector script -->
+   <script src="https://luamoris.github.io/lmSelect/lmSelect/lmSelect.js"></script>
 
    <!-- SCRIPT -->
    <script type="module" src="./page.js"></script>

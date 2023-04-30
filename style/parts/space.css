@@ -198,44 +198,87 @@
 
 /* ============ PARAMETERS ============ */
 
+:root {
+   --parameters-list-padding: 0px;
+
+   --param-font-s: 11px;
+   --param-h: 24px;
+   --param-name-w: 100px;
+   --param-name-padding: 2px 5px;
+
+   --param-data-w: 90px;
+}
+
 .parameters {
    width: var(--parameters-w);
    flex: 0 0 var(--parameters-w);
-   /* clear */
-   /* background-color: rgba(240, 157, 224, 0.1); */
 }
 
 .parameters__list {
+   padding: var(--parameters-list-padding);
    width: 100%;
 }
 
 .param {
    width: 100%;
-   height: 24px;
+   height: var(--param-h);
    margin: 0 0 6px 0;
 
    display: flex;
+   transition: background 150ms ease-out;
+}
+
+.param:hover {
+   background-color: var(--bg-01);
 }
 
 .param:last-child {
    margin: 0;
 }
 
-
-.param__name {
-   width: 100px;
-   height: 100%;
-   background-color: var(--bg-01);
+.param.highlighted {
+   animation: select 2000ms ease-out;
 }
 
-.param__title {}
+
+.param__name {
+   padding: var(--param-name-padding);
+   width: var(--param-name-w);
+   height: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   cursor: none;
+   user-select: none;
+   pointer-events: none;
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+
+   /* background-color: var(--bg-01); */
+}
+
+.param__title {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 600;
+   font-size: var(--param-font-s);
+   line-height: var(--line-height);
+   letter-spacing: var(--letter-spacing);
+
+   text-transform: capitalize;
+
+   color: var(--color-main);
+}
 
 .param__icon {}
 
 
 .param__data {
    margin: 0 0 0 10px;
-   width: 90px;
+   width: var(--param-data-w);
    height: 100%;
    background-color: var(--bg-01);
 }
@@ -807,6 +850,12 @@
       --prompt-padding: 26px;
       --prompt-input-mh: auto;
       --prompt-output-mh: 80px;
+
+      /* parameters */
+      --parameters-list-padding: 20px 20px 10px 20px;
+      --param-data-w: 120px;
+
+      --param-font-s: 10px;
    }
 
    .keyword {
@@ -833,6 +882,9 @@
       --word-mh: 20px;
 
       --prompt-padding: 20px;
+
+      /* parameters */
+      --param-font-s: 10px;
    }
 
    .word {
@@ -845,6 +897,15 @@
 
    .words__add {
       margin: 10px 20px 0 2px;
+   }
+
+   .parameters {
+      border-radius: var(--icon-radius);
+      border: var(--border-s) solid var(--bg-05);
+   }
+
+   .param {
+      justify-content: space-between;
    }
 }
 
