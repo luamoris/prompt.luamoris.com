@@ -34,6 +34,7 @@
    <link rel="stylesheet" href="./style/parts/footer.css">
 
    <link rel="stylesheet" href="./style/elements/select.css">
+   <link rel="stylesheet" href="./style/elements/choice.css">
 
    <title>PROMPT HELPER</title>
 </head>
@@ -258,21 +259,102 @@
                                              <div class="param__name">
                                                 <h4 class="param__title">video</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formTitle" class="param__data">
+                                                <div class="choice choice_false">
+                                                   <button class="choice__item" data-value="true">
+                                                      <div class="choice__box icon-box icon-box-12">
+                                                         <svg class="choice__icon icon-img" width="12" height="12"
+                                                            viewBox="0 0 12 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                               d="M5.12816 9.14645C4.9329 9.34172 4.61632 9.34171 4.42106 9.14645L1.76566 6.49106C1.5704 6.2958 1.5704 5.97921 1.76566 5.78395L2.27003 5.27959C2.46569 5.08392 2.78307 5.08438 2.97816 5.28061L4.42106 6.7319C4.61615 6.92813 4.93353 6.92859 5.12919 6.73293L9.03538 2.82673C9.22993 2.63219 9.5451 2.63137 9.74065 2.82491L10.2424 3.32146C10.4394 3.51642 10.4402 3.83442 10.2442 4.0304L5.12816 9.14645Z"
+                                                               fill="#fff" />
+                                                         </svg>
+                                                      </div>
+                                                   </button>
+                                                   <button class="choice__item" data-value="false">
+                                                      <div class="choice__box icon-box icon-box-12">
+                                                         <svg class="choice__icon" width="13" height="12"
+                                                            viewBox="0 0 13 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                               d="M4.28043 9.65708C4.08444 9.85307 3.76641 9.85223 3.57146 9.6552L3.09905 9.17777C2.90585 8.98252 2.90633 8.66798 3.10013 8.47332L5.21129 6.35277C5.40551 6.15769 5.40551 5.84232 5.21129 5.64724L3.0983 3.52486C2.90523 3.33092 2.90393 3.01781 3.09538 2.82227L3.57149 2.33604C3.76612 2.13727 4.08558 2.13558 4.28229 2.3323L6.39645 4.44645C6.59171 4.64172 6.90829 4.64171 7.10355 4.44645L9.21771 2.3323C9.41442 2.13558 9.73388 2.13726 9.92851 2.33604L10.4046 2.82227C10.5961 3.01781 10.5948 3.33092 10.4017 3.52486L8.28871 5.64724C8.09449 5.84232 8.09449 6.15769 8.28871 6.35277L10.3999 8.47332C10.5937 8.66798 10.5941 8.98252 10.401 9.17777L9.92854 9.6552C9.73359 9.85223 9.41556 9.85307 9.21957 9.65708L7.10355 7.54106C6.90829 7.3458 6.59171 7.3458 6.39645 7.54106L4.28043 9.65708Z"
+                                                               fill="#fff" />
+                                                         </svg>
+                                                      </div>
+                                                   </button>
+                                                   <input class="choice__input" type="text" name="choice-input"
+                                                      value="false">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- title -->
                                           <li id="title" class="param">
                                              <div class="param__name">
                                                 <h4 class="param__title">title</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formVideo" class="param__data">
+                                                <div class="choice choice_false">
+                                                   <button class="choice__item" data-value="true">
+                                                      <div class="choice__box icon-box icon-box-12">
+                                                         <svg class="choice__icon icon-img" width="12" height="12"
+                                                            viewBox="0 0 12 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                               d="M5.12816 9.14645C4.9329 9.34172 4.61632 9.34171 4.42106 9.14645L1.76566 6.49106C1.5704 6.2958 1.5704 5.97921 1.76566 5.78395L2.27003 5.27959C2.46569 5.08392 2.78307 5.08438 2.97816 5.28061L4.42106 6.7319C4.61615 6.92813 4.93353 6.92859 5.12919 6.73293L9.03538 2.82673C9.22993 2.63219 9.5451 2.63137 9.74065 2.82491L10.2424 3.32146C10.4394 3.51642 10.4402 3.83442 10.2442 4.0304L5.12816 9.14645Z"
+                                                               fill="#fff" />
+                                                         </svg>
+                                                      </div>
+                                                   </button>
+                                                   <button class="choice__item" data-value="false">
+                                                      <div class="choice__box icon-box icon-box-12">
+                                                         <svg class="choice__icon" width="13" height="12"
+                                                            viewBox="0 0 13 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                               d="M4.28043 9.65708C4.08444 9.85307 3.76641 9.85223 3.57146 9.6552L3.09905 9.17777C2.90585 8.98252 2.90633 8.66798 3.10013 8.47332L5.21129 6.35277C5.40551 6.15769 5.40551 5.84232 5.21129 5.64724L3.0983 3.52486C2.90523 3.33092 2.90393 3.01781 3.09538 2.82227L3.57149 2.33604C3.76612 2.13727 4.08558 2.13558 4.28229 2.3323L6.39645 4.44645C6.59171 4.64172 6.90829 4.64171 7.10355 4.44645L9.21771 2.3323C9.41442 2.13558 9.73388 2.13726 9.92851 2.33604L10.4046 2.82227C10.5961 3.01781 10.5948 3.33092 10.4017 3.52486L8.28871 5.64724C8.09449 5.84232 8.09449 6.15769 8.28871 6.35277L10.3999 8.47332C10.5937 8.66798 10.5941 8.98252 10.401 9.17777L9.92854 9.6552C9.73359 9.85223 9.41556 9.85307 9.21957 9.65708L7.10355 7.54106C6.90829 7.3458 6.59171 7.3458 6.39645 7.54106L4.28043 9.65708Z"
+                                                               fill="#fff" />
+                                                         </svg>
+                                                      </div>
+                                                   </button>
+                                                   <input class="choice__input" type="text" name="choice-input"
+                                                      value="false">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- creative -->
                                           <li id="creative" class="param">
                                              <div class="param__name">
                                                 <h4 class="param__title">creative</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formCreative" class="param__data">
+                                                <div class="choice choice_false">
+                                                   <button class="choice__item" data-value="true">
+                                                      <div class="choice__box icon-box icon-box-12">
+                                                         <svg class="choice__icon icon-img" width="12" height="12"
+                                                            viewBox="0 0 12 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                               d="M5.12816 9.14645C4.9329 9.34172 4.61632 9.34171 4.42106 9.14645L1.76566 6.49106C1.5704 6.2958 1.5704 5.97921 1.76566 5.78395L2.27003 5.27959C2.46569 5.08392 2.78307 5.08438 2.97816 5.28061L4.42106 6.7319C4.61615 6.92813 4.93353 6.92859 5.12919 6.73293L9.03538 2.82673C9.22993 2.63219 9.5451 2.63137 9.74065 2.82491L10.2424 3.32146C10.4394 3.51642 10.4402 3.83442 10.2442 4.0304L5.12816 9.14645Z"
+                                                               fill="#fff" />
+                                                         </svg>
+                                                      </div>
+                                                   </button>
+                                                   <button class="choice__item" data-value="false">
+                                                      <div class="choice__box icon-box icon-box-12">
+                                                         <svg class="choice__icon" width="13" height="12"
+                                                            viewBox="0 0 13 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                               d="M4.28043 9.65708C4.08444 9.85307 3.76641 9.85223 3.57146 9.6552L3.09905 9.17777C2.90585 8.98252 2.90633 8.66798 3.10013 8.47332L5.21129 6.35277C5.40551 6.15769 5.40551 5.84232 5.21129 5.64724L3.0983 3.52486C2.90523 3.33092 2.90393 3.01781 3.09538 2.82227L3.57149 2.33604C3.76612 2.13727 4.08558 2.13558 4.28229 2.3323L6.39645 4.44645C6.59171 4.64172 6.90829 4.64171 7.10355 4.44645L9.21771 2.3323C9.41442 2.13558 9.73388 2.13726 9.92851 2.33604L10.4046 2.82227C10.5961 3.01781 10.5948 3.33092 10.4017 3.52486L8.28871 5.64724C8.09449 5.84232 8.09449 6.15769 8.28871 6.35277L10.3999 8.47332C10.5937 8.66798 10.5941 8.98252 10.401 9.17777L9.92854 9.6552C9.73359 9.85223 9.41556 9.85307 9.21957 9.65708L7.10355 7.54106C6.90829 7.3458 6.59171 7.3458 6.39645 7.54106L4.28043 9.65708Z"
+                                                               fill="#fff" />
+                                                         </svg>
+                                                      </div>
+                                                   </button>
+                                                   <input class="choice__input" type="text" name="choice-input"
+                                                      value="false">
+                                                </div>
+                                             </div>
                                           </li>
                                        </ul>
                                     </div>
@@ -509,6 +591,9 @@
 
    <!-- Import LmSelector script -->
    <script src="https://luamoris.github.io/lmSelect/lmSelect/lmSelect.js"></script>
+
+   <!-- Import LmChoice script -->
+   <script src="./javascript/lmChoice.js"></script>
 
    <!-- SCRIPT -->
    <script type="module" src="./page.js"></script>

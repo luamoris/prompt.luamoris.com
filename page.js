@@ -11,6 +11,20 @@ const formAspectId = "formAspect";
 const formAspect = new LmSelect(formAspectId);
 formAspect.init(logData);
 
+// Choice
+
+const formCreativeId = "formCreative";
+const formCreative = new LmChoice(formCreativeId);
+formCreative.init(logData);
+
+const formVideoId = "formVideo";
+const formVideo = new LmChoice(formVideoId);
+formVideo.init(logData);
+
+const formTitleId = "formTitle";
+const formTitle = new LmChoice(formTitleId);
+formTitle.init(logData);
+
 // Textarea
 
 class lmTextarea {

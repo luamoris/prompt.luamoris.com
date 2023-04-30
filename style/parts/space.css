@@ -852,7 +852,7 @@
       --prompt-output-mh: 80px;
 
       /* parameters */
-      --parameters-list-padding: 20px 20px 10px 20px;
+      --parameters-list-padding: 20px;
       --param-data-w: 120px;
 
       --param-font-s: 10px;
@@ -874,6 +874,11 @@
    .prompt {
       width: 100%;
       margin: 0 0 var(--gap) 0;
+   }
+
+   .parameters {
+      border-radius: var(--icon-radius);
+      border: var(--border-s) solid var(--bg-05);
    }
 }
 
@@ -897,11 +902,6 @@
 
    .words__add {
       margin: 10px 20px 0 2px;
-   }
-
-   .parameters {
-      border-radius: var(--icon-radius);
-      border: var(--border-s) solid var(--bg-05);
    }
 
    .param {

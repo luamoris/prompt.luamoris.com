@@ -1,0 +1,119 @@
+/* ============ ROOT ============ */
+/* ============ CHOICE ============ */
+
+.choice {
+   position: relative;
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+}
+
+.choice__item {
+   z-index: 2;
+   position: relative;
+   margin: 2px 4px;
+   flex: 1 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   outline: none;
+
+   border: var(--link-border-s) solid transparent;
+   border-radius: var(--border-s);
+   background-color: transparent;
+
+   transition: background 150ms ease-out;
+}
+
+
+.choice::after {
+   content: "";
+
+   position: absolute;
+   top: 50%;
+
+   width: calc(50% - 8px);
+   height: calc(100% - 4px);
+
+   border-radius: var(--border-s);
+
+   transition: transform 200ms ease-in-out;
+}
+
+.choice.choice_false::after {
+   transform: translate(calc(100% + 12px), -50%);
+   background-color: var(--red-1);
+}
+
+.choice.choice_true::after {
+   transform: translate(calc(0% + 4px), -50%);
+   background-color: var(--green-1);
+}
+
+
+.choice__item:hover {
+   background-color: var(--bg-03);
+}
+
+
+.choice .choice__item[data-value="false"]:focus {
+   border-color: var(--red-2);
+   background-color: var(--bg-03);
+}
+
+.choice .choice__item[data-value="true"]:focus {
+   border-color: var(--green-1);
+   background-color: var(--bg-03);
+}
+
+.choice .choice__item .choice__icon path {
+   fill: var(--bg-2);
+}
+
+.choice.choice_false .choice__item[data-value="false"] .choice__icon path {
+   fill: var(--red);
+}
+
+.choice.choice_true .choice__item[data-value="true"] .choice__icon path {
+   fill: var(--green);
+}
+
+.choice__input {
+   display: none;
+}
+
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */
