@@ -35,6 +35,7 @@
 
    <link rel="stylesheet" href="./style/elements/select.css">
    <link rel="stylesheet" href="./style/elements/choice.css">
+   <link rel="stylesheet" href="./style/elements/check.css">
 
    <title>PROMPT HELPER</title>
 </head>
@@ -204,7 +205,15 @@
                                              <div class="param__name">
                                                 <h4 class="param__title">quality</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formQuality" class="param__data">
+                                                <div class="check">
+                                                   <button class="check__item" data-value="0.25">.25</button>
+                                                   <button class="check__item" data-value="0.5">.5</button>
+                                                   <button class="check__item check_active" data-value="1">1</button>
+                                                   <button class="check__item" data-value="2">2</button>
+                                                   <input class="check__input" type="text" name="check-input" value="">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- stylize -->
                                           <li id="stylize" class="param">
@@ -252,7 +261,14 @@
                                              <div class="param__name">
                                                 <h4 class="param__title">style</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formStyle" class="param__data">
+                                                <div class="check">
+                                                   <button class="check__item" data-value="4a">4a</button>
+                                                   <button class="check__item" data-value="4b">4b</button>
+                                                   <button class="check__item" data-value="4c">4c</button>
+                                                   <input class="check__input" type="text" name="check-input" value="">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- video -->
                                           <li id="video" class="param">
@@ -594,6 +610,9 @@
 
    <!-- Import LmChoice script -->
    <script src="./javascript/lmChoice.js"></script>
+
+   <!-- Import LmCheck script -->
+   <script src="./javascript/lmCheck.js"></script>
 
    <!-- SCRIPT -->
    <script type="module" src="./page.js"></script>

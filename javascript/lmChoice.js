@@ -25,15 +25,19 @@ class LmChoice {
    // function fun(data) {}
    init(fun) {
       this.choice.btnTrue.addEventListener("click", () => {
-         this.is = true;
-         this.setTrue();
-         this.addValue(this.is);
+         if (!this.is) {
+            this.is = true;
+            this.setTrue();
+            this.addValue(this.is);
+         }
       });
 
       this.choice.btnFalse.addEventListener("click", () => {
-         this.is = false;
-         this.setFalse();
-         this.addValue(this.is);
+         if (this.is) {
+            this.is = false;
+            this.setFalse();
+            this.addValue(this.is);
+         }
       });
 
       this.choice.input.addEventListener("change", event => {

@@ -1,0 +1,107 @@
+/* ============ ROOT ============ */
+/* ============ CHECK ============ */
+
+.check {
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: space-between;
+   align-content: stretch;
+}
+
+.check__item {
+   flex-basis: 0;
+   flex-grow: 1;
+
+   padding: 2px;
+   height: 100%;
+
+   outline: none;
+   border: none;
+
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 700;
+   font-size: var(--h5-s);
+   line-height: var(--line-height);
+   letter-spacing: var(--letter-spacing);
+
+   border: var(--link-border-s) solid transparent;
+   color: var(--blue-8);
+   background-color: transparent;
+
+   transition: background 150ms ease-out;
+}
+
+.check__item:hover,
+.check__item:focus {
+   background-color: var(--bg-03);
+}
+
+.check__item:focus {
+   border-color: var(--green-1);
+}
+
+.check_off {
+   cursor: none;
+   user-select: none;
+   pointer-events: none;
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   color: var(--bg-2);
+}
+
+.check_active {
+   color: var(--green);
+   background-color: var(--green-1);
+}
+
+.check_active:hover,
+.check_active:focus {
+   background-color: var(--green-2);
+}
+
+.check_active:focus {
+   border-color: var(--green-1);
+}
+
+.check__input {
+   display: none;
+}
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

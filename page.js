@@ -1,7 +1,9 @@
-// Select
 function logData(data) {
    console.log(data);
 }
+
+
+// Select
 
 const formVersionId = "formVersion";
 const formVersion = new LmSelect(formVersionId);
@@ -10,6 +12,7 @@ formVersion.init(logData);
 const formAspectId = "formAspect";
 const formAspect = new LmSelect(formAspectId);
 formAspect.init(logData);
+
 
 // Choice
 
@@ -24,6 +27,21 @@ formVideo.init(logData);
 const formTitleId = "formTitle";
 const formTitle = new LmChoice(formTitleId);
 formTitle.init(logData);
+
+
+// Check
+
+const formQualityId = "formQuality";
+const formQuality = new LmCheck(formQualityId);
+formQuality.init(logData);
+formQuality.offByValue("2");
+
+const formStyleId = "formStyle";
+const formStyle = new LmCheck(formStyleId);
+formStyle.init(logData);
+formStyle.offByValue("4a");
+formStyle.offByValue("4b");
+formStyle.offByValue("4c");
 
 // Textarea
 
