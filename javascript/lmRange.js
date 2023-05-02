@@ -52,7 +52,7 @@ class LmRange {
          this.isNumberFocus = false;
       }
 
-      // slider
+      // Slider PC
       this.range.slider.addEventListener("input", () => {
          this.range.number.value = parseInt(this.range.slider.value);
       });
@@ -69,6 +69,27 @@ class LmRange {
       });
 
       this.range.slider.addEventListener("mouseup", () => {
+         if (isMove && isDown) {
+            this.range.number.classList.remove(LmRangeClasses.addFocus);
+         }
+         updateValue();
+         isDown = false;
+         isMove = false;
+      });
+
+      // Slider Touch
+      this.range.slider.addEventListener("touchstart", () => {
+         isDown = true;
+      });
+
+      this.range.slider.addEventListener("touchmove", () => {
+         isMove = true;
+         if (isDown) {
+            this.range.number.classList.add(LmRangeClasses.addFocus);
+         }
+      });
+
+      this.range.slider.addEventListener("touchend", () => {
          if (isMove && isDown) {
             this.range.number.classList.remove(LmRangeClasses.addFocus);
          }
