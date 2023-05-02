@@ -171,6 +171,13 @@
    transition: background 150ms ease-out;
 }
 
+.range__value.range_focus {
+   text-align: left;
+   color: var(--green);
+   background-color: var(--bg-03);
+   border-color: var(--green-1);
+}
+
 .range__value:hover,
 .range__value:focus {
    background-color: var(--bg-03);

@@ -4,7 +4,7 @@ const LmRangeClasses = {
    range: "range",
    slider: "range__slider",
    number: "range__value",
-
+   addFocus: "range_focus",
 };
 
 const LmRangeShotKeys = {
@@ -26,31 +26,14 @@ class LmRange {
 
    init(fun) {
 
+      let isDown = false;
+      let isMove = false;
+
+      // Get Value
       const value = () => !this.range.number.value ? 0 : parseInt(this.range.number.value);
 
-      // slider
-      this.range.slider.addEventListener("input", () => {
-         this.range.number.value = parseInt(this.range.slider.value);
-         this.range.number.focus();
-      });
-
-      this.range.slider.addEventListener("mouseup", () => {
-         this.range.number.blur();
-      });
-
-
-      // number
-      this.range.number.addEventListener("input", () => {
-         const max = this.range.number.max;
-         this.range.number.value = value() > max ? max : value();
-         this.range.slider.value = value();
-      });
-
-      this.range.number.addEventListener("focusin", () => {
-         this.isNumberFocus = true;
-      });
-
-      this.range.number.addEventListener("focusout", () => {
+      // Update Value
+      const updateValue = () => {
          if (this.value !== value()) {
             const min = this.range.number.min;
             const max = this.range.number.max;
@@ -67,6 +50,47 @@ class LmRange {
             fun(data);
          }
          this.isNumberFocus = false;
+      }
+
+      // slider
+      this.range.slider.addEventListener("input", () => {
+         this.range.number.value = parseInt(this.range.slider.value);
+      });
+
+      this.range.slider.addEventListener("mousedown", () => {
+         isDown = true;
+      });
+
+      this.range.slider.addEventListener("mousemove", () => {
+         isMove = true;
+         if (isDown) {
+            this.range.number.classList.add(LmRangeClasses.addFocus);
+         }
+      });
+
+      this.range.slider.addEventListener("mouseup", () => {
+         if (isMove && isDown) {
+            this.range.number.classList.remove(LmRangeClasses.addFocus);
+         }
+         updateValue();
+         isDown = false;
+         isMove = false;
+      });
+
+
+      // number
+      this.range.number.addEventListener("input", () => {
+         const max = this.range.number.max;
+         this.range.number.value = value() > max ? max : value();
+         this.range.slider.value = value();
+      });
+
+      this.range.number.addEventListener("focusin", () => {
+         this.isNumberFocus = true;
+      });
+
+      this.range.number.addEventListener("focusout", () => {
+         updateValue();
       });
 
       // keydown Enter
