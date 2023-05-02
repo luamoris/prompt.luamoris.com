@@ -36,6 +36,7 @@
    <link rel="stylesheet" href="./style/elements/select.css">
    <link rel="stylesheet" href="./style/elements/choice.css">
    <link rel="stylesheet" href="./style/elements/check.css">
+   <link rel="stylesheet" href="./style/elements/range.css">
 
    <title>PROMPT HELPER</title>
 </head>
@@ -220,21 +221,42 @@
                                              <div class="param__name">
                                                 <h4 class="param__title">stylize</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formStylize" class="param__data">
+                                                <div class="range">
+                                                   <input class="range__slider" type="range" min="0" max="1000" step="1"
+                                                      value="100">
+                                                   <input class="range__value" type="number" min="0" max="1000" step="1"
+                                                      value="100">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- chaos -->
                                           <li id="chaos" class="param">
                                              <div class="param__name">
                                                 <h4 class="param__title">chaos</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formChaos" class="param__data">
+                                                <div class="range">
+                                                   <input class="range__slider" type="range" min="0" max="100" step="1"
+                                                      value="0">
+                                                   <input class="range__value" type="number" min="0" max="100" step="1"
+                                                      value="0">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- stop -->
                                           <li id="stop" class="param">
                                              <div class="param__name">
                                                 <h4 class="param__title">stop</h4>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formStop" class="param__data">
+                                                <div class="range">
+                                                   <input class="range__slider" type="range" min="10" max="100" step="1"
+                                                      value="100">
+                                                   <input class="range__value" type="number" min="10" max="100" step="1"
+                                                      value="100">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- seed -->
                                           <li id="seed" class="param">
@@ -534,37 +556,43 @@
                                  <div class="result__line"></div>
                                  <div class="result__content">
                                     <ul class="result__list">
-                                       <li class="result__prompt" data-result="1">
+                                       <li class="result__prompt" data-result="1" tabindex="0">
                                           <p class="prompt-template">
-                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="1">food</a>
+                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="1"
+                                                tabindex="-1">food</a>
                                              complete
-                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="2">food</a>
+                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="2"
+                                                tabindex="-1">food</a>
                                              review, realistic products, warm lighting, detailing, foodcore design,
                                              studio lighting, fully blurred clean studio background, dirty blurry
                                              background with light
-                                             <a href="#kw2" class="prompt-key _green anchor-link" data-id="3">color</a>
+                                             <a href="#kw2" class="prompt-key _green anchor-link" data-id="3"
+                                                tabindex="-1">color</a>
                                              gradient from dark to light from edges to center, high quality, 4K UHD
                                              ::
-                                             <a href="#version" class="prompt-parameter _blue anchor-link"
-                                                data-id="4">--v 4</a>
+                                             <a href="#version" class="prompt-parameter _blue anchor-link" data-id="4"
+                                                tabindex="-1">--v 4</a>
                                           </p>
                                           <div class="btn-copy icon-box icon-box-16">
                                              <img class="icon-img" src="./img/copy.svg" alt="Copy.">
                                           </div>
                                        </li>
-                                       <li class="result__prompt" data-result="2">
+                                       <li class="result__prompt" data-result="2" tabindex="0">
                                           <p class="prompt-template">
-                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="1">food</a>
+                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="1"
+                                                tabindex="-1">food</a>
                                              complete
-                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="2">food</a>
+                                             <a href="#kw1" class="prompt-key _red anchor-link" data-id="2"
+                                                tabindex="-1">food</a>
                                              review, realistic products, warm lighting, detailing, foodcore design,
                                              studio lighting, fully blurred clean studio background, dirty blurry
                                              background with light
-                                             <a href="#kw2" class="prompt-key _green anchor-link" data-id="3">color</a>
+                                             <a href="#kw2" class="prompt-key _green anchor-link" data-id="3"
+                                                tabindex="-1">color</a>
                                              gradient from dark to light from edges to center, high quality, 4K UHD
                                              ::
-                                             <a href="#version" class="prompt-parameter _blue anchor-link"
-                                                data-id="4">--v 4</a>
+                                             <a href="#version" class="prompt-parameter _blue anchor-link" data-id="4"
+                                                tabindex="-1">--v 4</a>
                                           </p>
                                           <div class="btn-copy icon-box icon-box-16">
                                              <img class="icon-img" src="./img/copy.svg" alt="Copy.">
@@ -613,6 +641,9 @@
 
    <!-- Import LmCheck script -->
    <script src="./javascript/lmCheck.js"></script>
+
+   <!-- Import LmRange script -->
+   <script src="./javascript/lmRange.js"></script>
 
    <!-- SCRIPT -->
    <script type="module" src="./page.js"></script>

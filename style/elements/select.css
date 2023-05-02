@@ -19,7 +19,7 @@
    line-height: var(--line-height);
    letter-spacing: var(--letter-spacing);
    text-transform: none;
-   color: var(--green);
+   color: var(--blue);
 }
 
 .dropdown-btn {
@@ -45,6 +45,7 @@
 
 .dropdown-btn:focus,
 .dropdown-btn._focus {
+   color: var(--green);
    border-color: var(--green-1);
    background-color: var(--green-1);
 }
@@ -62,10 +63,14 @@
 
    border-radius: 1px;
    border-width: var(--droptdown-3);
-   border-color: var(--green) transparent transparent transparent;
+   border-color: var(--blue) transparent transparent transparent;
    border-style: solid;
 
    pointer-events: none;
+}
+
+.dropdown-btn:focus::after {
+   border-color: var(--green) transparent transparent transparent;
 }
 
 .dropdown-input {

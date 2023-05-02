@@ -43,6 +43,21 @@ formStyle.offByValue("4a");
 formStyle.offByValue("4b");
 formStyle.offByValue("4c");
 
+
+// Range 
+
+const formChaosId = "formChaos";
+const formChaos = new LmRange(formChaosId);
+formChaos.init(logData);
+
+const formStylizeId = "formStylize";
+const formStylize = new LmRange(formStylizeId);
+formStylize.init(logData);
+
+const formStopId = "formStop";
+const formStop = new LmRange(formStopId);
+formStop.init(logData);
+
 // Textarea
 
 class lmTextarea {

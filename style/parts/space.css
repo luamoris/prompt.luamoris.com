@@ -695,6 +695,7 @@
    border-radius: var(--icon-radius);
    background-color: var(--bg-05);
 
+   outline: none;
    cursor: pointer;
 }
 
@@ -723,7 +724,8 @@
       transition: background 200ms ease-in-out, border 200ms ease-in-out, transform 100ms ease-in-out;
    }
 
-   .result__prompt:hover {
+   .result__prompt:hover,
+   .result__prompt:focus {
       background-color: var(--bg-08);
       border: var(--link-border-s) solid var(--bg-1);
    }
