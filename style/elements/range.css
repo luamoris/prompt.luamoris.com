@@ -158,7 +158,7 @@
    width: 40px;
    height: 100%;
 
-   direction: ltr;
+   /* direction: ltr; */
    text-align: right;
    outline: none;
    border: none;
@@ -179,6 +179,9 @@
 .range__value:focus {
    color: var(--green);
    border-color: var(--green-1);
+
+   /* direction: rtl; */
+   text-align: left;
 }
 
 .range__value {
