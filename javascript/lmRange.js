@@ -15,7 +15,6 @@ class LmRange {
    constructor(rangeId) {
       const wrapper = document.getElementById(rangeId);
 
-      this.isSliderFocus = false;
       this.isNumberFocus = false;
       this.range = {
          it: wrapper.querySelector(`.${LmRangeClasses.range}`),
@@ -32,30 +31,13 @@ class LmRange {
       // slider
       this.range.slider.addEventListener("input", () => {
          this.range.number.value = parseInt(this.range.slider.value);
+         this.range.number.focus();
       });
 
-      this.range.slider.addEventListener("focusin", () => {
-         this.isSliderFocus = true;
+      this.range.slider.addEventListener("mouseup", () => {
+         this.range.number.blur();
       });
 
-      this.range.slider.addEventListener("focusout", () => {
-         if (this.value !== value()) {
-            const data = {
-               value: parseInt(this.range.slider.value),
-            };
-
-            this.value = data.value;
-            fun(data);
-         }
-         this.isSliderFocus = false;
-      });
-
-      // keydown Enter
-      document.addEventListener("keydown", event => {
-         if (event.key === LmRangeShotKeys.enter && this.isSliderFocus) {
-            this.range.slider.blur();
-         }
-      });
 
       // number
       this.range.number.addEventListener("input", () => {
