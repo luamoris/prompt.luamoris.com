@@ -37,6 +37,7 @@
    <link rel="stylesheet" href="./style/elements/choice.css">
    <link rel="stylesheet" href="./style/elements/check.css">
    <link rel="stylesheet" href="./style/elements/range.css">
+   <link rel="stylesheet" href="./style/elements/number.css">
 
    <title>PROMPT HELPER</title>
 </head>
@@ -268,7 +269,12 @@
                                                    <img class="icon-img" src="./img/fire.svg" alt="New parameter.">
                                                 </div>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formSeed" class="param__data">
+                                                <div class="number" data-placeholder="number">
+                                                   <input type="number" class="number__input" min="0" max="99999999999"
+                                                      step="1" value="">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- sameseed -->
                                           <li id="sameseed" class="param">
@@ -278,7 +284,12 @@
                                                    <img class="icon-img" src="./img/nofire.svg" alt="Old parameter.">
                                                 </div>
                                              </div>
-                                             <div class="param__data"></div>
+                                             <div id="formSameseed" class="param__data">
+                                                <div class="number" data-placeholder="number">
+                                                   <input type="number" class="number__input" min="0" max="99999999999"
+                                                      step="1" value="">
+                                                </div>
+                                             </div>
                                           </li>
                                           <!-- style -->
                                           <li id="style" class="param">
@@ -646,6 +657,9 @@
 
    <!-- Import LmRange script -->
    <script src="./javascript/lmRange.js"></script>
+
+   <!-- Import LmNumber script -->
+   <script src="./javascript/lmNumber.js"></script>
 
    <!-- SCRIPT -->
    <script type="module" src="./page.js"></script>

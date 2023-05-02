@@ -50,7 +50,7 @@ class LmRange {
             fun(data);
          }
          this.isNumberFocus = false;
-      }
+      };
 
       // Slider PC
       this.range.slider.addEventListener("input", () => {

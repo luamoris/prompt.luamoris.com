@@ -58,6 +58,17 @@ const formStopId = "formStop";
 const formStop = new LmRange(formStopId);
 formStop.init(logData);
 
+// Number
+
+const formSeedId = "formSeed";
+const formSeed = new LmNumber(formSeedId);
+formSeed.init(logData)
+
+const formSameseedId = "formSameseed";
+const formSameseed = new LmNumber(formSameseedId);
+formSameseed.init(logData)
+formSameseed.off();
+
 // Textarea
 
 class lmTextarea {

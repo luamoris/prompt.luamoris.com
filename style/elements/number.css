@@ -1,0 +1,121 @@
+/* ============ ROOT ============ */
+/* ============ NUMBER ============ */
+
+.number,
+.number__input {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 700;
+   font-size: 8px;
+   line-height: 150%;
+   letter-spacing: 0.02em;
+}
+
+.number {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.number:not(.number_focus)::after {
+   content: attr(data-placeholder);
+
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   font-weight: 600;
+
+   color: var(--bg-2);
+
+   cursor: none;
+   pointer-events: none;
+}
+
+
+.number__input {
+   padding: 4px 8px;
+   width: 100%;
+   height: 100%;
+
+   text-align: center;
+   outline: none;
+   border: none;
+
+   color: var(--blue);
+   border: var(--link-border-s) solid transparent;
+   border-radius: var(--border-s);
+   background-color: transparent;
+
+   transition: background 150ms ease-out;
+}
+
+.number__input:hover,
+.number__input:focus {
+   background-color: var(--bg-03);
+}
+
+.number__input:focus {
+   color: var(--green);
+   border-color: var(--green-1);
+}
+
+.number__input::-webkit-outer-spin-button,
+.number__input::-webkit-inner-spin-button {
+   display: none;
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+.number_off {
+   cursor: none;
+   user-select: none;
+   pointer-events: none;
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   color: transparent;
+}
+
+.number_off:not(.number_focus)::after {
+   color: transparent;
+}
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

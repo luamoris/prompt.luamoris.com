@@ -53,7 +53,7 @@
    -ms-user-select: none;
    -moz-user-select: none;
    -webkit-user-select: none;
-   color: var(--bg-2);
+   color: transparent;
 }
 
 .check_active {
