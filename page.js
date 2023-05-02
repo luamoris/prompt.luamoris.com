@@ -104,10 +104,16 @@ inputText.addEvent(() => autoResize(inputText.textarea))
 
 // anchor-link
 function selectionAnchor(event) {
-   // event.preventDefault();
+   event.preventDefault();
+
    const link = event.target;
+
+   const anchorMain = document.getElementById(link.dataset.anchor);
+   anchorMain.scrollIntoView(true);
+
    const targetId = link.getAttribute('href');
    const targetBlock = document.querySelector(targetId);
+
    if (targetBlock) {
       targetBlock.classList.add('highlighted');
       setTimeout(() => {
