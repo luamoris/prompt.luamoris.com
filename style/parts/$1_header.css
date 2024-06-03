@@ -137,7 +137,7 @@
 }
 
 .menu_setline {
-   display: flex;
+   display: none;
    align-items: center;
 }
 

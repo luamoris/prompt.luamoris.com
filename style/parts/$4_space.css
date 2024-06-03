@@ -893,6 +893,14 @@
    }
 }
 
+@media (max-width: 600px) {
+   .btn-apply {
+      padding: 6px 10px;
+   }
+
+}
+
+
 @media (max-width: 500px) {
    :root {
       --word-mh: 20px;
