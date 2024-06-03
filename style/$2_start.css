@@ -1,0 +1,3 @@
+@import url('/style/start/$1_normalize.css');
+@import url('/style/start/$2_help.css');
+@import url('/style/start/$3_shell.css');

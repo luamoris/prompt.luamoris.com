@@ -29,10 +29,8 @@ class LmRange {
       let isDown = false;
       let isMove = false;
 
-      // Get Value
       const value = () => !this.range.number.value ? 0 : parseInt(this.range.number.value);
 
-      // Update Value
       const updateValue = () => {
          if (this.value !== value()) {
             const min = this.range.number.min;

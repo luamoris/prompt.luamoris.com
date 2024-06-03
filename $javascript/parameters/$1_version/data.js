@@ -78,7 +78,6 @@ class DataVersion extends Data {
       return this.toParam(title, optVersion.argument);
    }
 
-
    // findInText(text) { }
 
    // removeInText(text) {}

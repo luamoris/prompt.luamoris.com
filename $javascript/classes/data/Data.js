@@ -3,46 +3,6 @@
 import DataError from "../error/DataError.js"
 import { SLASH, DataErrorStr } from "../../helpers/constants.js"
 
-/* Data Interface
-
-   + options
-
-   > this.settings = { isShort: true }
-
-   - get(text, versionId); // найти в тексте и вернуть
-      - { null, null, null, opt } - если ничего не найдено
-      - { text, default, argument, opt } - если параметр есть
-
-   ===
-
-   - pattern(); // паттерн для поиска в тексте
-      - result = new RegExp();
-
-   toParam(title, argument, isNull = true) // текстовая версия параметра
-      - paramStr
-
-   - toString(argument); // в зависимости от isShort полная версия параметра
-      - paramStr
-
-   - findInText(text); // поиск параметра в тексте
-      - result = { title, argument };
-
-   - removeInText(text); удалить значение в тексте 
-      - text (без параметра)
-      - исходный text (если параметр на нашел)
-   
-   - getSuppurtOpt(versionId); // данные параметра, которые поддерживаются версией
-      - null = если параметр не поддерживается версией 
-      - opt = если параметр поддерживается версией
-
-   - isArgument(argument, support); // корректный ли аргумент
-      - { argument: null } если аргумент не корректный
-      - { argument: data } если аргумент нормальный
-      - null если аргумент не найдет
-
-
-*/
-
 class Data {
 
    constructor(option) {
@@ -52,14 +12,10 @@ class Data {
       };
    }
 
-   // ===
-
    get(text, versionId) {
       const result = { text: null, default: null, argument: null, opt: null };
       const param = this.findInText(text);
       const support = this.getSuppurtOpt(versionId);
-
-      // console.log("p: ", param);
 
       if (!param) {
 
@@ -69,9 +25,6 @@ class Data {
             }
             return null;
          }
-
-         // console.log(this.patternTitle());
-         // console.log(this.findTitleInText(text));
 
          if (this.findTitleInText(text) && support.isValues) {
             throw new DataError(DataErrorStr.e2, this.option.title.long);
@@ -85,10 +38,8 @@ class Data {
          const paramStr = this.toParam(param.title, param.argument, false);
          if (!support.isSupport) throw new DataError(DataErrorStr.e1, paramStr);
          const value = this.isArgument(param.argument, support);
-         // console.log(value);
-         if (!value) throw new DataError(DataErrorStr.e2, paramStr);
 
-         // console.log(param.argument, support);
+         if (!value) throw new DataError(DataErrorStr.e2, paramStr);
 
          result.text = this.toString(value.argument);
          result.argument = value.argument;

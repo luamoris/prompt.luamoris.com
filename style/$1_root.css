@@ -9,7 +9,7 @@
 :root {
    --font-family: "Montserrat";
 
-   --pattern-img: url("../img/pattern.svg");
+   --pattern-img: url("/img/pattern.svg");
    --pattern-size: 120px;
    --pattern-opacity: 0.1;
 

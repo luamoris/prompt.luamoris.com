@@ -1,0 +1,5 @@
+@import url('/style/elements/$1_select.css');
+@import url('/style/elements/$2_choice.css');
+@import url('/style/elements/$3_check.css');
+@import url('/style/elements/$4_range.css');
+@import url('/style/elements/$5_number.css');

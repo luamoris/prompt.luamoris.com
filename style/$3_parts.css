@@ -1,0 +1,7 @@
+@import url('/style/parts/$1_header.css');
+@import url('/style/parts/$2_main.css');
+@import url('/style/parts/$3_title.css');
+@import url('/style/parts/$4_space.css');
+@import url('/style/parts/$5_result.css');
+@import url('/style/parts/$6_footer.css');
+@import url('/style/parts/$7_window.css');

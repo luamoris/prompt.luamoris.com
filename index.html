@@ -22,27 +22,17 @@
    <link rel="apple-touch-icon" href="./favicon.ico">
    <link rel="apple-touch-icon-precomposed" href="./favicon.ico">
 
-   <link rel="stylesheet" href="./style/root.css">
-   <link rel="stylesheet" href="./style/normalize.css">
-   <link rel="stylesheet" href="./style/help.css">
-   <link rel="stylesheet" href="./style/shell.css">
-   <link rel="stylesheet" href="./style/parts/header.css">
-   <link rel="stylesheet" href="./style/parts/main.css">
-   <link rel="stylesheet" href="./style/parts/title.css">
-   <link rel="stylesheet" href="./style/parts/space.css">
-   <link rel="stylesheet" href="./style/parts/result.css">
-   <link rel="stylesheet" href="./style/parts/footer.css">
-
-   <link rel="stylesheet" href="./style/elements/select.css">
-   <link rel="stylesheet" href="./style/elements/choice.css">
-   <link rel="stylesheet" href="./style/elements/check.css">
-   <link rel="stylesheet" href="./style/elements/range.css">
-   <link rel="stylesheet" href="./style/elements/number.css">
+   <link rel="stylesheet" href="./style/$1_root.css">
+   <link rel="stylesheet" href="./style/$2_start.css">
+   <link rel="stylesheet" href="./style/$3_parts.css">
+   <link rel="stylesheet" href="./style/$4_elements.css">
 
    <title>PROMPT HELPER</title>
 </head>
 
 <body>
+
+
    <!-- WRAPPER -->
    <div id="wrapper">
       <!-- APP -->
@@ -57,6 +47,48 @@
 
                         <!-- 2-HEADER -->
                         <header class="header">
+
+                           <!-- menu -->
+                           <div class="top">
+                              <!-- LOGIN -->
+                              <div id="menuLogin" class="menu menu_login">
+                                 <div id="menuBtnLogin" class="menu-btn menu-btn-login" tabindex="0">
+                                    <div class="icon">
+                                       <div class="icon-box icon-box-12">
+                                          <img class="icon-img" src="./img/icon_login.svg" alt="Login icon.">
+                                       </div>
+                                    </div>
+                                    <span class="menu-btn-title">Login</span>
+                                 </div>
+                              </div>
+                              <!-- LOGOUT -->
+                              <div id="menuLogout" class="menu menu_logout menu_active">
+                                 <!-- left -->
+                                 <div class="menu_logout_left">
+                                    <div class="user-avatar"></div>
+                                    <span class="user-name">user</span>
+                                 </div>
+                                 <!-- right -->
+                                 <div class="menu_logout_right">
+                                    <div id="menuBtnHistory" class="menu-btn menu-btn-history" tabindex="0">
+                                       <div class="icon">
+                                          <div class="icon-box icon-box-12">
+                                             <img class="icon-img" src="./img/icon-history.svg" alt="History icon.">
+                                          </div>
+                                       </div>
+                                       <span class="menu-btn-title">History</span>
+                                    </div>
+                                    <div id="menuBtnLogout" class="menu-btn menu-btn-logout" tabindex="0">
+                                       <div class="icon">
+                                          <div class="icon-box icon-box-12">
+                                             <img class="icon-img" src="./img/icon_logout.svg" alt="Logout icon.">
+                                          </div>
+                                       </div>
+                                       <span class="menu-btn-title">Logout</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
 
                            <!-- avatar -->
                            <div class="avatar no-copy">
@@ -79,18 +111,6 @@
                               </a>
                            </div>
 
-                           <!-- name -->
-                           <h2 class="name">
-                              <a href="http://luamoris.com" class="name__text" target="_blank">luamoris</a>
-                           </h2>
-
-                           <!-- subtitle -->
-                           <div class="subtitle">
-                              <a href="http://donation.luamoris.com" class="subtitle__link" target="_blank">
-                                 development donation
-                              </a>
-                           </div>
-
                         </header>
 
 
@@ -101,13 +121,51 @@
                            <section class="section">
                               <div class="title">
                                  <div class="icon">
-                                    <div class="icon-box icon-box-16">
+                                    <div class="icon-box icon-box-30">
                                        <img class="icon-img" src="./img/light.svg" alt="Light icon.">
                                     </div>
                                  </div>
                                  <h1 class="title__h1">midjourney helper</h1>
                               </div>
                            </section>
+
+                           <!-- addition -->
+                           <div class="setline">
+                              <div id="menuSetline" class="menu menu_setline menu_active">
+                                 <!-- left -->
+                                 <div class="setline_left">
+                                    <input id="setlineName" class="setline__input" type="text" name="name"
+                                       placeholder="Prompt Name" maxlength="120">
+                                 </div>
+                                 <!-- right -->
+                                 <div class="setline_right">
+                                    <div id="menuBtnSave" class="menu-btn menu-btn-save" tabindex="0">
+                                       <div class="icon">
+                                          <div class="icon-box icon-box-12">
+                                             <img class="icon-img" src="./img/icon_save.svg" alt="Save icon.">
+                                          </div>
+                                       </div>
+                                       <span class="menu-btn-title">Save</span>
+                                    </div>
+                                    <div id="menuBtnDownload" class="menu-btn menu-btn-download" tabindex="0">
+                                       <div class="icon">
+                                          <div class="icon-box icon-box-12">
+                                             <img class="icon-img" src="./img/icon_download.svg" alt="Download icon.">
+                                          </div>
+                                       </div>
+                                       <span class="menu-btn-title">Download</span>
+                                    </div>
+                                    <div id="menuBtnNew" class="menu-btn menu-btn-new" tabindex="0">
+                                       <div class="icon">
+                                          <div class="icon-box icon-box-12">
+                                             <img class="icon-img" src="./img/icon_new.svg" alt="New icon.">
+                                          </div>
+                                       </div>
+                                       <span class="menu-btn-title">New</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
 
                            <!-- space -->
                            <section class="section">
@@ -121,17 +179,18 @@
                                        <div class="prompt__input-box">
                                           <div class="prompt__input">
                                              <textarea id="inputPrompt" class="prompt__input-text _autosize"
-                                                placeholder="Example ..."></textarea>
-                                             <div class="btn-apply icon-box icon-box-12">
-                                                <img class="icon-box-12" src="./img/restart.svg" alt="Apply.">
+                                                placeholder="[__FOOD__*] complete [__FOOD__*] review, realistic products, warm lighting, detailing, foodcore design, high quality, 4K UHD :: --v 4"></textarea>
+                                             <div id="btnPromptApply" class="btn-apply icon-box icon-box-12"
+                                                tabindex="0">
+                                                <img class="icon-box-12" src="./img/icon_apply.svg" alt="Apply.">
                                                 <span class="btn-name">apply</span>
                                              </div>
                                           </div>
                                        </div>
                                        <!-- output -->
                                        <div class="prompt__output-box">
-                                          <div class="prompt__output">
-                                             <p class="prompt-template">
+                                          <div id="promptTemplateId" class="prompt__output">
+                                             <!-- <p class="prompt-template">
                                                 <a href="#kw1" class="prompt-key _red anchor-link" data-anchor="kw1"
                                                    data-id="1">food</a>
                                                 complete
@@ -146,12 +205,13 @@
                                                 ::
                                                 <a href="#version" class="prompt-parameter _blue anchor-link"
                                                    data-anchor="parameters" data-id="4">--v 4</a>
-                                             </p>
+                                             </p> -->
                                           </div>
                                        </div>
                                     </div>
                                     <!-- parameters -->
                                     <div id="parameters" class="parameters">
+                                       <input type="text" id="paramHiddenInput" style="display: none;">
                                        <ul class="parameters__list">
                                           <!-- version -->
                                           <li id="version" class="param">
@@ -414,22 +474,19 @@
                                  <!-- keywords -->
                                  <div class="keywords">
                                     <div class="keywords__content">
-                                       <ul class="keywords__list">
+                                       <ul id="keywordListId" class="keywords__list">
                                           <!-- id-1 -->
-                                          <li id="kw1" class="keyword lock">
+                                          <!-- <li id="kw1" class="keyword lock">
                                              <div class="keyword__caption">
-                                                <!-- icon -->
                                                 <div class="keyword__icon icon-box icon-box-12">
                                                    <img src="./img/key.svg" alt="Key icon." class="icon-img">
                                                 </div>
-                                                <!-- title -->
                                                 <div class="keyword__title">
                                                    <div class="title-container"
                                                       data-title="There will be a full name if it is more than a container.">
                                                       <span class="title-name">food</span>
                                                    </div>
                                                 </div>
-                                                <!-- status -->
                                                 <div class="keyword__status">
                                                    <svg class="svg-lock" width="33" height="33" viewBox="0 0 33 33"
                                                       fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -481,22 +538,19 @@
                                                    </div>
                                                 </div>
                                              </div>
-                                          </li>
+                                          </li> -->
                                           <!-- id-2 -->
-                                          <li id="kw2" class="keyword">
+                                          <!-- <li id="kw2" class="keyword">
                                              <div class="keyword__caption">
-                                                <!-- icon -->
                                                 <div class="keyword__icon icon-box icon-box-12">
                                                    <img src="./img/key.svg" alt="Key icon." class="icon-img">
                                                 </div>
-                                                <!-- title -->
                                                 <div class="keyword__title">
                                                    <div class="title-container"
                                                       data-title="There will be a full name if it is more than a container.">
                                                       <span class="title-name">color</span>
                                                    </div>
                                                 </div>
-                                                <!-- status -->
                                                 <div class="keyword__status">
                                                    <svg class="svg-lock" width="33" height="33" viewBox="0 0 33 33"
                                                       fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -549,7 +603,7 @@
                                                    </div>
                                                 </div>
                                              </div>
-                                          </li>
+                                          </li> -->
                                           <!-- end -->
                                        </ul>
                                     </div>
@@ -568,8 +622,8 @@
                                  </div>
                                  <div class="result__line"></div>
                                  <div class="result__content">
-                                    <ul class="result__list">
-                                       <li class="result__prompt" data-result="1" tabindex="0">
+                                    <ul id="resultListId" class="result__list">
+                                       <!-- <li class="result__prompt" data-result="1" tabindex="0">
                                           <p class="prompt-template">
                                              <a href="#kw1" class="prompt-key _red anchor-link" data-anchor="kw1"
                                                 data-id="1" tabindex="-1">food</a>
@@ -610,7 +664,7 @@
                                           <div class="btn-copy icon-box icon-box-16">
                                              <img class="icon-img" src="./img/copy.svg" alt="Copy.">
                                           </div>
-                                       </li>
+                                       </li> -->
                                     </ul>
                                  </div>
                               </div>
@@ -641,35 +695,138 @@
       </div>
    </div>
 
+
+   <div id="window" class="window">
+      <div id="windowBox" class="window__box">
+         <div class="window__container">
+            <div class="win__form">
+
+               <div id="win" class="win">
+
+                  <div id="winClose" class="w_close">
+                     <div class="btn-win-close icon-box icon-box-12">
+                        <img class="icon-img" src="./img/close.svg" alt="Delete">
+                     </div>
+                  </div>
+
+                  <!-- LOGIN -->
+                  <div id="wLogin" class="w_login">
+
+                     <div class="w_error">
+                        <div class="w_error__box">
+                           <span class="w_error_title">ERROR</span>
+                           <span class="w_error_message">Incorrect email address or password.</span>
+                        </div>
+                     </div>
+
+                     <form id="formLogin" class="form" action="#">
+                        <div class="fitem">
+                           <input id="loginFormEmail" class="form__input" name="email" type="email"
+                              pattern="^[^\W\d_]\w+@\w+\.\w+(\.\w+)?$" placeholder="Email" required="">
+                        </div>
+                        <div class="fitem">
+                           <input id="loginFormPassword" class="form__input" name="password" type="password" pattern=""
+                              placeholder="Password">
+                        </div>
+                        <div class="fitem">
+                           <button class="form__button form__button_login">login</button>
+                        </div>
+                        <div class="ftext ftext_row ftext_12px">
+                           <span class="ftext__simple">No account?</span>
+                           <span id="BtnCreateOne" class="ftext__button">Create one</span>
+                        </div>
+                     </form>
+
+                  </div>
+
+                  <!-- CREATE -->
+                  <div id="wCreate" class="w_create">
+
+                     <div class="w_error">
+                        <div class="w_error__box">
+                           <span class="w_error_title">ERROR</span>
+                           <span class="w_error_message">Weak password. Try again!</span>
+                        </div>
+                     </div>
+
+                     <form id="formCreate" class="form" action="#">
+                        <div class="fitem">
+                           <input id="createFormEmail" class="form__input" name="email" type="email"
+                              pattern="^[^\W\d_]\w+@\w+\.\w+(\.\w+)?$" placeholder="Email" required="">
+                        </div>
+                        <div class="fitem">
+                           <input id="createFormPassword" class="form__input" name="password" type="password" pattern=""
+                              placeholder="Password" required="(?=.*[A-Z]).{5,}">
+                        </div>
+                        <div class="fitem">
+                           <button class="form__button form__button_create">create account</button>
+                        </div>
+                        <div class="ftext ftext_colomn ftext_10px">
+                           <span class="ftext__simple">By clicking "CREATE ACCOUNT" you agree to the</span>
+                           <a class="ftext__link" href="https://policy.luamoris.com/" target="_blank">Luamoris Privacy
+                              Policy</a>
+                        </div>
+                        <div class="ftext ftext_row ftext_12px">
+                           <span class="ftext__simple">Already have an account?</span>
+                           <span id="BtnLogin" class="ftext__button">Log in</span>
+                        </div>
+                     </form>
+
+                  </div>
+
+                  <!-- LOGOUT -->
+                  <div id="wLogout" class="w_logout">Logout</div>
+
+                  <!-- SAVE -->
+                  <div id="wSave" class="w_save">Save</div>
+
+                  <!-- WAIT -->
+                  <div id="wWait" class="w_wait">Wait</div>
+
+                  <!-- NEW -->
+                  <div id="wNew" class="w_new">New</div>
+
+                  <!-- HISTORY -->
+                  <div id="wHistory" class="w_history">History</div>
+
+                  <!-- CHANGES -->
+                  <div id="wChanges" class="w_changes">Changes</div>
+
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+
    <!-- ERROR -->
    <div class="screen screen_error screen_unuse">
       <div class="error"></div>
    </div>
-
 
    <!-- SCREEN -->
    <div class="screen screen_unuse">
       <div class="screen__box"></div>
    </div>
 
-   <!-- Import LmSelector script -->
+   <!-- LOCATION -->
+   <script src="./js/location.js"></script>
+
+   <!-- IMPORT SCRIPT -->
    <script src="https://luamoris.github.io/lmSelect/lmSelect/lmSelect.js"></script>
 
-   <!-- Import LmChoice script -->
-   <script src="./javascript/lmChoice.js"></script>
-
-   <!-- Import LmCheck script -->
-   <script src="./javascript/lmCheck.js"></script>
-
-   <!-- Import LmRange script -->
-   <script src="./javascript/lmRange.js"></script>
-
-   <!-- Import LmNumber script -->
-   <script src="./javascript/lmNumber.js"></script>
-
    <!-- SCRIPT -->
-   <script type="module" src="./page.js"></script>
-   <script type="module" src="./main.js"></script>
+   <script src="./js/scripts/lmChoice.js"></script>
+   <script src="./js/scripts/lmCheck.js"></script>
+   <script src="./js/scripts/lmRange.js"></script>
+   <script src="./js/scripts/lmNumber.js"></script>
+   <script src="./js/scripts/lmTextarea.js"></script>
+
+   <!-- SCRIPT MODULES-->
+   <script type="module" src="./index.js"></script>
+   <!-- <script type="module" src="./main.js"></script> -->
+
+
 </body>
 
 </html>

@@ -68,7 +68,8 @@
    top: auto;
    bottom: 0;
 
-   display: flex;
+   /* flex */
+   display: none;
    align-items: center;
    justify-content: center;
 }

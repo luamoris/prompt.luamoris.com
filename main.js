@@ -1,7 +1,5 @@
 // ===== ===== ===== ===== IMPORT
 
-// import Keywords from "./keywords/Keywords.js";
-
 import DataVersion from "./$javascript/parameters/$1_version/data.js";
 import DataAspect from "./$javascript/parameters/$2_aspect/data.js";
 import DataQuality from "./$javascript/parameters/$3_quality/data.js";
@@ -18,7 +16,7 @@ import DataNo from "./$javascript/parameters/$20_no/data.js";
 
 
 // ===== ===== ===== ===== DATA
-// test
+
 let promptText = `[__йоська__], complete [__FOOD__*] review, realistic products,
 warm lighting, detailing, foodcore design, studio lighting,
 fully blurred clean studio [__FOOD__] background, dirty blurry
@@ -27,8 +25,6 @@ high quality, 4K UHD :: --v 4 --ar 1:1 --q 1 --style 4c --no {x}`;
 
 
 // ===== ===== ===== ===== CODE
-
-// const keywords = new Keywords("");
 
 const dataVersion = new DataVersion();
 const dataAspect = new DataAspect();

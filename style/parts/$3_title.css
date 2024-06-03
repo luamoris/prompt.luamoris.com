@@ -5,22 +5,23 @@
    width: 100%;
 
    display: flex;
-   align-items: center;
+   align-items: flex-end;
    justify-content: center;
 }
 
 .title__h1 {
-   margin: 0 10px;
+   margin: 0 4px;
 
    font-family: "Montserrat";
-   font-size: var(--h2-s);
+   font-size: 32px;
    font-style: normal;
    font-weight: 900;
+   line-height: 0.7;
    letter-spacing: var(--letter-spacing);
 
    text-transform: uppercase;
 
-   color: var(--main-color);
+   color: var(--color-main);
 }
 
 /* ============ ANIMATION ============ */
@@ -34,7 +35,9 @@
 }
 
 @media (max-width: 768px) {
-   :root {}
+   .title__h1 {
+      font-size: 24px
+   }
 }
 
 @media (max-width: 500px) {
@@ -42,7 +45,9 @@
 }
 
 @media (max-width: 425px) {
-   :root {}
+   .title__h1 {
+      font-size: 20px
+   }
 }
 
 @media (max-width: 375px) {

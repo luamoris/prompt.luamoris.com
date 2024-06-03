@@ -1,0 +1,358 @@
+/* ============ ROOT ============ */
+
+
+/* ============ WINDOW ============ */
+
+body {
+   /* transition: padding-right 200ms ease; */
+}
+
+body.hidden {
+   overflow: hidden;
+}
+
+.window {
+   z-index: 1000;
+
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+
+   width: 100%;
+   height: 100%;
+
+   transition: background 200ms ease-out;
+   pointer-events: none;
+}
+
+.window__box {
+   overflow-x: hidden;
+   overflow-y: auto;
+
+   width: 100%;
+   height: 100%;
+
+   opacity: 0;
+   transition: opacity 150ms ease-in-out;
+
+   pointer-events: none;
+}
+
+.window__container {
+   margin: 0 auto;
+   padding: 50px 20px;
+   width: 100%;
+   min-height: 100vh;
+   max-width: 1400px;
+}
+
+.window.window_open,
+.window.window_open .window__box {
+   pointer-events: all;
+}
+
+.win__form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   min-height: calc(100vh - 100px);
+   width: 100%;
+   height: 100%;
+}
+
+.win {
+   padding: 10px;
+   background-color: #191A1B;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 4px;
+
+   transform: scale(0.8);
+   transition: transform 150ms ease-out;
+
+   width: 400px;
+   height: auto;
+}
+
+.w_login,
+.w_create,
+.w_logout,
+.w_save,
+.w_wait,
+.w_history,
+.w_changes,
+.w_new {
+   display: none;
+}
+
+.w_active {
+   display: block;
+}
+
+/* ============ CLOSE */
+
+.w_close {
+   width: 100%;
+   height: 12px;
+   display: flex;
+   justify-content: right;
+   margin-bottom: 10px;
+
+   opacity: 0;
+   pointer-events: none;
+}
+
+.btn-win-close {
+   cursor: pointer;
+   transition: transform 150ms ease-out;
+}
+
+.btn-win-close:hover {
+   transform: scale(1.2);
+}
+
+.btn-win-close:active {
+   transform: scale(1);
+}
+
+.w_close_active {
+   opacity: 1;
+   pointer-events: all;
+}
+
+/* ============ LOGIN */
+
+/* error */
+.w_error {
+   width: 100%;
+   padding: 0 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 10px;
+
+   opacity: 0;
+   pointer-events: none;
+}
+
+.w_error__box {
+   padding: 6px 10px;
+   width: 100%;
+   height: max-content;
+
+   display: flex;
+   align-items: start;
+   justify-content: flex-start;
+
+   border-radius: 2px;
+   background-color: var(--red-1);
+}
+
+.w_error_title,
+.w_error_message {
+   font-size: 10px;
+}
+
+.w_error_title {
+   font-weight: 600;
+   margin-right: 6px;
+   color: var(--red);
+}
+
+.w_error_message {
+   font-weight: 400;
+}
+
+/* form */
+
+.form {
+   width: 100%;
+   padding: 0 40px 20px 40px;
+
+   display: flex;
+   flex-direction: column;
+
+   /* background-color: rgba(255, 255, 255, 0.075); */
+}
+
+/* form item */
+
+.fitem {
+   width: 100%;
+   margin-bottom: 20px;
+
+   /* background-color: rgba(255, 255, 255, 0.075); */
+}
+
+.form__input {
+   width: 100%;
+   height: 40px;
+   padding: 10px;
+
+
+   border-radius: 2px;
+   border: 1px solid transparent;
+   background-color: rgba(255, 255, 255, 0.05);
+
+   font-size: 12px;
+   font-weight: 500;
+   color: rgba(255, 255, 255, 0.8);
+
+   transition: border-color 150ms ease-in-out;
+}
+
+.form__input:placeholder {
+   color: rgba(255, 255, 255, 0.6);
+}
+
+.form__input:focus {
+   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form__button {
+   width: 100%;
+   height: 40px;
+   border: 1px solid transparent;
+   border-radius: 2px;
+
+   font-size: 12px;
+   font-weight: 600;
+   text-transform: uppercase;
+
+   transition: all 150ms ease-in-out;
+}
+
+.form__button:active {
+   transform: scale(0.98);
+}
+
+.form__button_login {
+   color: rgba(76, 179, 73, 0.6);
+   background-color: rgba(76, 179, 73, 0.1);
+}
+
+.form__button_login:hover {
+   color: rgba(76, 179, 73, 1);
+   border: 1px solid rgba(76, 179, 73, 0.6);
+}
+
+.form__button_create {
+   color: rgba(241, 193, 42, 0.6);
+   background-color: rgba(241, 193, 42, 0.1);
+}
+
+.form__button_create:hover {
+   color: rgba(241, 193, 42, 1);
+   border: 1px solid rgba(241, 193, 42, 0.6);
+}
+
+/* form text */
+
+.ftext {
+   width: 100%;
+   padding: 0 10px;
+   margin-bottom: 20px;
+}
+
+.ftext:last-child {
+   margin-bottom: 0px;
+}
+
+.ftext span {
+   margin: 0 2px;
+}
+
+.ftext_row {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.ftext_colomn {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.ftext_12px {
+   font-size: 12px;
+}
+
+.ftext_10px {
+   font-size: 10px;
+}
+
+.ftext__simple,
+.ftext__button {
+   font-size: inherit;
+   font-weight: 500;
+}
+
+.ftext__simple {
+   color: rgba(255, 255, 255, 0.5);
+}
+
+.ftext__button {
+   cursor: pointer;
+   color: rgba(61, 139, 218, 0.8);
+   transition: color 150ms ease-in-out;
+}
+
+.ftext__button:hover {
+   color: rgba(61, 139, 218, 1);
+}
+
+.ftext__link {
+   margin: 4px 0;
+   color: rgba(61, 139, 218, 0.8);
+   text-decoration: none;
+   transition: color 150ms ease-in-out;
+}
+
+.ftext__link:hover {
+   color: rgba(61, 139, 218, 1);
+}
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   .window__container {
+      padding: 10px;
+   }
+
+   .win__form {
+      min-height: calc(100vh - 20px);
+   }
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   .win {
+      width: 100%;
+   }
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */

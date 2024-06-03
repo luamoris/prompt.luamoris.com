@@ -1,0 +1,104 @@
+/* ============ ROOT ============ */
+
+/* ============ 404 ============ */
+
+@keyframes pulse {
+   0% {
+      transform: scale(1);
+      opacity: 1;
+   }
+
+   50% {
+      transform: scale(1.1);
+      opacity: 0.6;
+   }
+
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+@keyframes colors {
+   0% {
+      fill: #ffffff;
+      color: #ffffff;
+   }
+
+   25% {
+      fill: #4CB349;
+      color: #F1C12A;
+   }
+
+   50% {
+      fill: #E2624A;
+      color: #E2624A;
+   }
+
+   75% {
+      fill: #F1C12A;
+      color: #4CB349;
+   }
+
+   100% {
+      fill: #ffffff;
+      color: #ffffff;
+   }
+}
+
+
+.notfound {
+   margin: 0 auto;
+   flex: 1 1 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.notfound-text {
+   font-size: 80px;
+   font-weight: 800;
+   margin: 0 10px;
+   animation: pulse 2s infinite, colors 2s infinite;
+}
+
+.avatar_404 {
+   animation: pulse 2s infinite;
+}
+
+.avatar_404 path {
+   animation: colors 2s infinite;
+}
+
+
+/* ============ ANIMATION ============ */
+
+@media (min-width: 768px) {}
+
+/* ============ MEDIA ============ */
+
+@media (max-width: 1024px) {
+   :root {}
+}
+
+@media (max-width: 768px) {
+   :root {}
+}
+
+@media (max-width: 500px) {
+   :root {}
+}
+
+@media (max-width: 425px) {
+   :root {}
+}
+
+@media (max-width: 375px) {
+   :root {}
+}
+
+@media (max-width: 320px) {
+   :root {}
+}
+
+/* ============ END :) ============ */
