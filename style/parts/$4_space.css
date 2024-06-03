@@ -725,6 +725,10 @@
    background-color: transparent;
 }
 
+.result__prompt:active {
+   transform: scale(.99);
+}
+
 /* ============ ANIMATION ============ */
 
 @media (min-width: 768px) {
@@ -737,10 +741,6 @@
    .result__prompt:focus {
       background-color: var(--bg-08);
       border: var(--link-border-s) solid var(--bg-1);
-   }
-
-   .result__prompt:active {
-      transform: scale(.99);
    }
 
    @keyframes shake {
