@@ -96,7 +96,7 @@ class Prompt {
                   <div class="words__box">
                       <ul class="words__list _grid"></ul>
                       <div class="words__add">
-                          <input type="text" class="words__input" placeholder="value">
+                          <input type="text" class="words__input" placeholder="value" enterkeyhint="enter">
                           <div class="btn-add icon-box icon-box-12" tabindex="0">
                               <img class="icon-box-12" src="./img/add.svg" alt="Add">
                           </div>
